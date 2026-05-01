@@ -59,10 +59,10 @@ SENT_DB_FILE = OUTPUT_DIR / ".sent_articles.json"
 # 内容筛选配置（默认只保留科技/AI/商业相关内容）
 ENABLE_CONTENT_FILTER = os.environ.get("ENABLE_CONTENT_FILTER", "true").lower() != "false"
 
-# DeepSeek API 配置
-DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY")
-DEEPSEEK_BASE_URL = "https://api.deepseek.com"
-DEEPSEEK_MODEL = "deepseek-chat"
+# MiniMax API 配置
+MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY")
+MINIMAX_BASE_URL = "https://api.minimax.chat/v1"
+MINIMAX_MODEL = "MiniMax-M2.7"
 
 # GitHub Pages 配置（自动从 GITHUB_REPOSITORY 推断，也可通过环境变量覆盖）
 _default_pages_url = ""
@@ -303,7 +303,7 @@ async def enrich_articles_with_full_content(articles: list[Article]):
 
 # ── AI 摘要生成 ──────────────────────────────────────────
 def create_llm_client() -> OpenAI:
-    return OpenAI(api_key=DEEPSEEK_API_KEY, base_url=DEEPSEEK_BASE_URL)
+    return OpenAI(api_key=MINIMAX_API_KEY, base_url=MINIMAX_BASE_URL)
 
 
 SUMMARIZE_PROMPT = """\
@@ -332,7 +332,7 @@ def summarize_with_llm(client: OpenAI, articles: list[Article]) -> list[dict]:
         user_msg = f"原标题: {article.title}\n来源: {article.source}\n\n{content_trimmed}"
         try:
             response = client.chat.completions.create(
-                model=DEEPSEEK_MODEL,
+                model=MINIMAX_MODEL,
                 messages=[
                     {"role": "system", "content": SUMMARIZE_PROMPT},
                     {"role": "user", "content": user_msg},
@@ -373,7 +373,7 @@ def enrich_detail_with_llm(client: OpenAI, articles: list[Article]) -> None:
         user_msg = f"标题: {article.ai_title or article.title}\n来源: {article.source}\n\n{content_trimmed}"
         try:
             response = client.chat.completions.create(
-                model=DEEPSEEK_MODEL,
+                model=MINIMAX_MODEL,
                 messages=[
                     {"role": "system", "content": DETAIL_PROMPT},
                     {"role": "user", "content": user_msg},
