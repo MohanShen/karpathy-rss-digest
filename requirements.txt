@@ -1,6 +1,7 @@
+# Dependencies for rss_reader.py (aligned with .github/workflows/rss-digest.yml)
 feedparser==6.0.11
 httpx==0.27.0
-jinja2==3.1.4
+beautifulsoup4==4.12.3
 python-dateutil==2.9.0
-openai>=1.0.0
-beautifulsoup4>=4.12.0
+jinja2==3.1.4
+openai>=1.40.0,<2
