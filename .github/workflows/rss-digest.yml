@@ -1,11 +1,11 @@
 name: RSS Digest
 
+# Scheduled runs are disabled: digest is generated locally and pushed to `docs/`
+# (see CONTEXT.md). Re-enable cron below if you want GitHub to run it again.
 on:
-  # 每天北京时间 22:00（UTC 14:00）运行
-  schedule:
-    - cron: '0 14 * * *'
-  # 手动触发
   workflow_dispatch:
+  # schedule:
+  #   - cron: '0 14 * * *'   # was: daily 14:00 UTC / 22:00 Beijing
 
 permissions:
   contents: write  # 允许推送代码到仓库

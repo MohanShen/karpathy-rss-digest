@@ -2,7 +2,7 @@
 
 This document describes how to run the digest **on your machine**, then **commit and push** so the static site under `docs/` is served at your GitHub Pages URL (for example `https://<user>.github.io/<repo>/`).
 
-GitHub Actions can still run on a schedule; if you switch to **local-only** generation, consider disabling the scheduled workflow (or use only manual dispatch) so two sources do not overwrite each other’s `docs/` commits.
+In this repository, **`.github/workflows/rss-digest.yml` no longer uses a `schedule` trigger** (no daily cron). You can still run **`RSS Digest` manually** from the Actions tab (`workflow_dispatch`) if you need a one-off remote run. That avoids two writers fighting over `docs/` when you publish locally.
 
 ---
 

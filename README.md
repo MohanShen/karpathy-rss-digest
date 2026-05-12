@@ -6,7 +6,7 @@
 
 - **智能筛选**：自动过滤非科技/AI/商业类内容，只收录高质量文章
 - **AI 解读**：使用 DeepSeek 生成中文标题、摘要和详细解读
-- **自动更新**：GitHub Actions 每天北京时间 22:00 自动抓取当日文章
+- **自动更新**：可在本机定时运行后推送 `docs/`（见 `CONTEXT.md`）；仓库内 **GitHub Actions 定时任务已关闭**，仍可在 Actions 里 **手动运行** `RSS Digest`
 - **企业微信推送**：每期自动挑选 3-5 篇最重要的 AI/科技文章推送，附完整解读链接
 - **GitHub Pages**：生成精美网页，公开访问
 
@@ -49,13 +49,11 @@ python rss_reader.py --days 3
 
 ## ⚙️ GitHub Actions 自动化
 
-项目已配置 GitHub Actions，每天北京时间 22:00 自动运行：
+项目已配置 GitHub Actions 工作流 `RSS Digest`（**无定时 cron**，仅 **手动触发**）。日常可在本机生成后推送 `docs/`，详见根目录 **`CONTEXT.md`**：
 
-1. Fork 本仓库
-2. 在仓库设置中添加 Secrets：
-   - `DEEPSEEK_API_KEY`：DeepSeek API Key
-   - `WECOM_WEBHOOK_URL`：企业微信 Webhook URL（可选）
-3. 等待自动运行，或手动触发 workflow
+1. 克隆本仓库
+2. 在仓库 **Settings → Secrets** 中配置 `MINIMAX_API_KEY`（若仍要手动在 GitHub 上跑 workflow）
+3. 需要时在 **Actions → RSS Digest → Run workflow** 手动运行
 
 ## 📋 命令行参数
 
