@@ -309,16 +309,124 @@ def create_llm_client() -> OpenAI:
 SUMMARIZE_PROMPT = """\
 你是科技编辑。判断文章类别并生成中文标题和摘要。
 
-类别：AI（人工智能/ML/LLM）、科技（开发/云计算/硬件/安全）、商业（科技公司/创业/投资）、其他。
-非科技类直接返回 is_relevant=false，title/summary 留空。
+类别（category 字段必须且只能是下面四个字之一，不要用英文、不要组合、不要解释）：
+- AI：人工智能、机器学习、LLM、深度学习等
+- 科技：软件开发、编程、安全、密码学、硬件、云计算、数学/算法在工程中的应用等
+- 商业：科技公司、创业、投资、产品发布等
+- 其他：纯生活、健康医疗、美食、体育、文艺、与科技行业无关的社会评论等
 
-JSON 格式（不要添加其他内容）：
-{"category": "AI/科技/商业/其他", "is_relevant": true/false, "title": "中文标题(≤30字)", "summary": "一句话摘要(≤80字)"}
+RSS 列表里的博客多为科技/开发者向：涉及编程、安全、工程、数学、产品技术、行业分析的，应归入 AI 或 科技，不要轻易标为其他。
+
+非「其他」类时 is_relevant 必须为 true，并填写 title 与 summary；为「其他」时 is_relevant 为 false，title/summary 可为空字符串。
+
+只输出一行合法 JSON（不要 markdown、不要前后说明）：
+{"category": "AI", "is_relevant": true, "title": "中文标题(≤30字)", "summary": "一句话摘要(≤80字)"}
 """
 
 DETAIL_PROMPT = """\
 你是资深科技编辑。用5-8句话写完整中文解读：第一段讲文章内容，第二段提炼核心观点/数据，第三段说对从业者的启发。专有名词保留英文（GPT、Transformer、Rust等）。只输出解读文本，不加其他内容。
 """
+
+
+def _coerce_bool(v, default: bool = True) -> bool:
+    """模型或 JSON 可能返回字符串形式的布尔值。"""
+    if v is None:
+        return default
+    if isinstance(v, bool):
+        return v
+    if isinstance(v, (int, float)):
+        return bool(v)
+    if isinstance(v, str):
+        s = v.strip().lower()
+        if s in ("true", "yes", "1", "是"):
+            return True
+        if s in ("false", "no", "0", "否"):
+            return False
+    return default
+
+
+def normalize_category_and_relevance(data: dict) -> tuple[str, bool]:
+    """
+    将 MiniMax 返回的 category / is_relevant 规范为四字类别 + 布尔。
+    修复：缺省 category 被当成「其他」导致整批被误杀；英文类别名未映射等。
+    """
+    raw_cat = data.get("category")
+    if raw_cat is not None and not isinstance(raw_cat, str):
+        raw_cat = str(raw_cat)
+    raw_cat = (raw_cat or "").strip()
+    # 模型照抄示例里的占位符
+    if raw_cat in ("AI/科技/商业/其他", "AI、科技、商业、其他", "AI/科技/商业"):
+        raw_cat = ""
+
+    is_rel = _coerce_bool(data.get("is_relevant"), default=True)
+    c_lower = raw_cat.lower()
+
+    # 已是规范四字之一
+    if raw_cat in ("AI", "科技", "商业", "其他"):
+        canonical = raw_cat
+    elif any(
+        x in c_lower
+        for x in (
+            "artificial intelligence",
+            "machine learning",
+            "deep learning",
+            " llm",
+            "neural",
+            "gpt",
+        )
+    ) or "人工智能" in raw_cat or "机器学习" in raw_cat:
+        canonical = "AI"
+    elif any(
+        x in c_lower
+        for x in (
+            "technology",
+            "tech",
+            "software",
+            "developer",
+            "programming",
+            "engineering",
+            "cyber",
+            "security",
+            "cryptograph",
+            "hardware",
+            "cloud",
+            "devops",
+            "algorithm",
+            "math",
+        )
+    ) or any(
+        x in raw_cat
+        for x in ("编程", "开发", "安全", "密码", "算法", "软件", "硬件", "网络", "系统", "工程", "数学", "技术")
+    ):
+        canonical = "科技"
+    elif any(x in c_lower for x in ("business", "startup", "venture", "invest", "finance")) or any(
+        x in raw_cat for x in ("商业", "创业", "投资", "融资", "上市")
+    ):
+        canonical = "商业"
+    elif "AI" in raw_cat or "科技" in raw_cat or "商业" in raw_cat:
+        if "AI" in raw_cat or "人工智能" in raw_cat:
+            canonical = "AI"
+        elif "商业" in raw_cat:
+            canonical = "商业"
+        else:
+            canonical = "科技"
+    elif not raw_cat:
+        # 未返回 category：不要默认「其他」误杀；结合 is_relevant
+        if is_rel:
+            canonical = "科技"
+        else:
+            canonical = "其他"
+    else:
+        # 无法识别的非空串：若模型认为相关则归为科技，否则其他
+        canonical = "科技" if is_rel else "其他"
+
+    if canonical == "其他":
+        is_rel = False
+    else:
+        # 非其他类：以模型 is_relevant 为准，缺省为 true
+        is_rel = _coerce_bool(data.get("is_relevant"), default=True)
+
+    return canonical, is_rel
 
 
 def summarize_with_llm(client: OpenAI, articles: list[Article]) -> list[dict]:
@@ -338,16 +446,13 @@ def summarize_with_llm(client: OpenAI, articles: list[Article]) -> list[dict]:
                     {"role": "user", "content": user_msg},
                 ],
                 temperature=0.3,
-                max_tokens=200,
+                max_tokens=320,
             )
             resp_text = response.choices[0].message.content.strip()
             json_match = re.search(r'\{.*\}', resp_text, re.DOTALL)
             if json_match:
                 data = json.loads(json_match.group())
-                is_relevant = data.get("is_relevant", True)
-                category = data.get("category", "其他")
-                if category == "其他":
-                    is_relevant = False
+                category, is_relevant = normalize_category_and_relevance(data)
                 results.append({
                     "title": data.get("title", article.title) if is_relevant else article.title,
                     "summary": data.get("summary", "") if is_relevant else "",
@@ -355,6 +460,8 @@ def summarize_with_llm(client: OpenAI, articles: list[Article]) -> list[dict]:
                     "is_relevant": is_relevant,
                 })
             else:
+                if os.environ.get("RSS_DEBUG_LLM", "").lower() in ("1", "true", "yes"):
+                    logger.warning(f"LLM 未返回可解析 JSON，原文片段: {resp_text[:400]!r}")
                 results.append({"title": article.title, "summary": "", "category": "其他", "is_relevant": False})
         except Exception as e:
             logger.warning(f"LLM 摘要失败 [{article.title[:30]}]: {e}")
@@ -811,12 +918,28 @@ async def fetch_and_process(days: int, since: datetime = None,
     return articles
 
 
+def parse_since_cli(value: str) -> datetime:
+    """解析 --since（ISO8601）；无时区则视为 UTC。"""
+    dt = date_parser.parse(value)
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+
+
 # ── 主逻辑 ────────────────────────────────────────────────
 async def run_digest(days: int = 1, fmt: str = "markdown",
                      print_output: bool = True, webhook_url: str = None,
-                     enable_filter: bool = True):
-    since = datetime.now(timezone.utc) - timedelta(days=days)
-    logger.info(f"🚀 开始抓取，时间范围: 最近 {days} 天 (自 {since.strftime('%Y-%m-%d %H:%M UTC')})")
+                     enable_filter: bool = True,
+                     since_override: Optional[datetime] = None):
+    if since_override is not None:
+        since = since_override.astimezone(timezone.utc)
+        logger.info(
+            f"🚀 开始抓取，时间窗口起点: {since.strftime('%Y-%m-%d %H:%M UTC')} "
+            f"（与某次 CI 一致时，把日志里的「自 … UTC」贴到 --since）"
+        )
+    else:
+        since = datetime.now(timezone.utc) - timedelta(days=days)
+        logger.info(f"🚀 开始抓取，时间范围: 最近 {days} 天 (自 {since.strftime('%Y-%m-%d %H:%M UTC')})")
 
     sent_db = load_sent_db() if webhook_url else None
     articles = await fetch_and_process(days, since, webhook_url, sent_db, enable_filter)
@@ -848,9 +971,16 @@ def main():
   python rss_reader.py --days 3                 # 抓取最近3天
   python rss_reader.py --no-filter              # 禁用内容筛选，收录所有文章
   python rss_reader.py --webhook <URL>          # 抓取并推送到企业微信群
+  python rss_reader.py --since "2026-05-10T16:33:00Z"  # 复现 CI 日志里的时间窗口（需 MINIMAX_API_KEY）
         """,
     )
     parser.add_argument("--days", type=int, default=1, help="抓取最近N天的内容 (默认: 1)")
+    parser.add_argument(
+        "--since",
+        type=str,
+        default=None,
+        help="本地复现：文章发布时间下限（ISO8601），与 Actions 日志「自 … UTC」一致",
+    )
     parser.add_argument("--output", choices=["markdown", "html"], default="html", help="输出格式 (默认: html)")
     parser.add_argument("--webhook", type=str, default=None, help="企业微信群 Webhook URL (或设置 WECOM_WEBHOOK_URL 环境变量)")
     parser.add_argument("--no-filter", action="store_true", help="禁用内容筛选（收录所有类别文章）")
@@ -858,8 +988,17 @@ def main():
 
     enable_filter = ENABLE_CONTENT_FILTER and not args.no_filter
     webhook_url = args.webhook or os.environ.get("WECOM_WEBHOOK_URL")
+    since_override = parse_since_cli(args.since) if args.since else None
 
-    asyncio.run(run_digest(args.days, args.output, webhook_url=webhook_url, enable_filter=enable_filter))
+    asyncio.run(
+        run_digest(
+            args.days,
+            args.output,
+            webhook_url=webhook_url,
+            enable_filter=enable_filter,
+            since_override=since_override,
+        )
+    )
 
 
 if __name__ == "__main__":
