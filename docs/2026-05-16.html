@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年05月16日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年05月16日  |  共 4 篇来自 4 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. CreateFileMapping名称冲突排查与解决</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-2">2. 破解xorshift128：随机数的状态恢复</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-3">3. Simon Willison 发布 QR 码生成器工具</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-4">4. 如何获得新想法</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>💻 科技 / 技术</h2>
+
+
+<div class="article" id="article-1">
+  <h3>CreateFileMapping名称冲突排查与解决</h3>
+  <div class="article-meta">
+    <span>📝 devblogs.microsoft.com/oldnewthing · Raymond Chen</span>
+    <span>🕐 2026-05-15 14:00</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">Old New Thing</span><span class="tag">Code</span></div>
+  <div class="detail"><think>这是一篇关于Windows API中CreateFileMapping名称冲突问题的技术博客文章。我需要用5-8句话写中文解读，分三段：
+
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+文章内容摘要：
+- 用户报告CreateFileMapping创建命名文件映射时，虽然调用返回成功，但得到的映射大小不是想要的（想要1MB，实际只有4KB）
+- 调用GetLastError()得到ERROR_ALREADY_EXISTS，说明映射已存在
+- 这种情况即使刚重启后也会发生
+- 使用Process Explorer搜索发现是摄像头配套软件使用了相同名称
+- 解决方案是在名称后追加GUID来避免冲突
+
+核心观点：
+- CreateFileMapping的name参数如果相同，会返回已存在的映射而不是创建新的
+- 4KB是Windows默认的页面大小
+- 命名冲突问题
+
+启发：
+- 使用GUID或唯一标识符命名
+- 调试时使用工具检查现有内核对象
+- 保留Error信息检查</think>
+
+## 文章内容
+
+一个客户报告其程序调用CreateFileMapping创建命名文件映射时，调用虽然成功，但返回的映射大小不是预期值。他们请求创建1MB的映射，实际却只有4KB，导致访问第4097字节时程序崩溃。调用GetLastError()返回ERROR_ALREADY_EXISTS，表示映射已存在。奇怪的是，这种情况甚至发生在刚重启后首次运行时。使用Process Explorer搜索所有进程后发现，罪魁祸首是摄像头的配套软件，它恰好使用了完全相同的文件映射名称。客户通过在名称后追加GUID解决了冲突。
+
+## 核心观点
+
+Windows的CreateFileMapping函数在name参数相同时，不会创建新映射，而是返回已存在的映射对象，导致大小参数被忽略。本案例中第三方软件使用了未加前缀的通用名称，导致名称冲突。返回4KB的原因是Windows默认页面粒度为4KB，映射创建时使用了已有映射的原始大小。
+
+## 对从业者的</div>
+  
+  <a class="read-original" href="https://devblogs.microsoft.com/oldnewthing/20260515-00/?p=112327" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-2">
+  <h3>破解xorshift128：随机数的状态恢复</h3>
+  <div class="article-meta">
+    <span>📝 johndcook.com · John</span>
+    <span>🕐 2026-05-15 12:34</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">Computing</span><span class="tag">RNG</span></div>
+  <div class="detail"><think>The user wants me to write a Chinese summary of this tech article. The article discusses how to reverse-engineer the internal state of xorshift128, a random number generator.
+
+Let me follow the format requirements:
+1. First paragraph: article content
+2. Second paragraph: core insights/data
+3. Third paragraph: implications for practitioners
+4. Keep technical terms in English
+5. 5-8 sentences per paragraph
+6. Only output the summary text, nothing else
+
+Let me write this in Chinese, keeping technical terms in English.</think>
+
+文章展示了如何破解 xorshift128 随机数生成器的内部状态。通过分析 xorshift128 的实现代码，可以观察到其状态由四个 32 位变量 (a, b, c, d) 组成，每次输出都是对状态进行特定位移和异或运算的结果。作者演示了一个关键发现：xorshift128 的内部状态本质上就是最近四次输出的逆序排列。这意味着攻击者只需观察到连续四个输出，就能完整恢复 RNG 的内部状态，进而预测后续所有输出。作者通过 Python 代码验证了这一点：先用 xorshift128 生成五个随机数，然后仅用前四个输出重新初始化状态机，第五次调用时得到了完全相同的值 0xc3f4795d。
+
+这篇文章的核心结论是：统计特性良好不等于安全性。文章明确指出 Mersenne Twister、lehmer64 和 xorshift128 都属于可预测的 RNG，虽然它们的统计分布通过严格测试，但在密码学场景下都是灾难性的选择。PCG64 虽然恢复状态需要更复杂的数学工具和数千小时的计算资源，但最终仍可被破解。作者强调真正的安全随机数生成需要使用专门设计的加密算法，如 ChaCha。数据显示这种安全性的代价是性能和内存占用的增加，PCG64 在内存效率和速度上都优于 CSPRNG。
+
+对于工程师而言，这篇文章的实践启示非常明确：选择 RNG 时必须区分应用场景。如果是 Monte Carlo 模拟、游戏开发或非安全相关的随机</div>
+  
+  <a class="read-original" href="https://www.johndcook.com/blog/2026/05/15/xorshift128-state/" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-3">
+  <h3>Simon Willison 发布 QR 码生成器工具</h3>
+  <div class="article-meta">
+    <span>📝 simonwillison.net</span>
+    <span>🕐 2026-05-15 04:00</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">vibe-coding</span><span class="tag">tools</span><span class="tag">generative-ai</span><span class="tag">ai</span><span class="tag">llms</span></div>
+  <div class="detail"><think>用户希望我作为资深科技编辑，对Simon Willison发布的QR码生成器工具进行解读。需要包含三段：
+1. 文章内容
+2. 核心观点/数据
+3. 对从业者的启发
+
+要用5-8句话写完整中文解读，专有名词保留英文。
+
+让我开始写：
+
+文章内容：Simon Willison发布了一个QR码生成器工具，可以用URL或文本生成QR码，支持多种设计风格、可自定义颜色和尺寸等。
+
+核心观点：这个工具展示了AI辅助开发的实际应用案例，Claude帮助构建了这个工具，体现了现代开发中人与AI协作的模式。
+
+对从业者的启发：开发者可以学习如何快速构建实用工具，AI辅助编程正变得更加普及。
+</think>
+
+
+
+Simon Willison 于2026年5月15日在其博客上发布了一款 QR 码生成器工具，该工具可以将任意 URL 或文本快速转换为 QR 码，并支持多种自定义样式，包括方形和流动图案、多种尺寸、自定义颜色及可选边框，同时支持下载为 PNG 格式或直接复制到剪贴板。据 Simon 介绍，这款工具利用 Claude 协助开发完成，既能生成普通文本和链接的 QR 码，也支持 WiFi 网络连接的专用 QR 码。工具展现了 AI 辅助编程在快速构建实用应用中的实际落地案例，体现了当前 LLM 与开发者协作开发模式的主流趋势。作为 AI 领域知名观察者，Simon Willison 的工具发布反映了 AI 辅助开发正从概念验证走向成熟的产品化阶段。对开发者而言，此案例表明掌握与 AI 工具协同工作的能力已成为现代开发的核心技能之一；同时，快速验证并发布小工具的低门槛开发模式值得借鉴，开发者应学会利用 Claude、GPT 等 LLM 工具加速从想法到原型的过程，而非过度追求复杂架构。</div>
+  
+  <a class="read-original" href="https://simonwillison.net/2026/May/15/qr-code-generator/#atom-everything" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-4">
+  <h3>如何获得新想法</h3>
+  <div class="article-meta">
+    <span>📝 paulgraham.com</span>
+    <span>🕐 近期</span>
+    <span class="category-tag">科技</span>
+  </div>
+  
+  <div class="detail"><think>用户要求我以资深科技编辑的身份，用5-8句话写一个完整的中文解读。需要包含三部分：第一段讲文章内容，第二段提炼核心观点/数据，第三段说对从业者的启发。专有名词保留英文（如GPT、Transformer、Rust等）。只输出解读文本，不加其他内容。
+
+让我分析这篇文章：
+- 作者是Paul Graham
+- 主题是"如何获得新想法"
+- 他用GPT回答了这个问题，但认为GPT的回答不够好，所以写了自己的答案
+- 核心观点：获得新想法的方法是注意异常现象（anomalies）
+- 可以从日常生活中发现异常（喜剧就是基于这个）
+- 最好的地方是知识的边界
+- 知识像分形一样增长，边缘看起来平滑，但接近时会发现很多缺口
+- 这些缺口看起来很明显
+- 探索这些缺口会产生新的分形芽
+
+现在我来写解读：
+
+第一段（内容）：
+Paul Graham在这篇文章中分享了他对创新来源的思考。他指出GPT虽然能回答问题，但在回答"好想法从哪里来"这个问题时缺乏真正的洞见。他认为，获得新想法的关键在于发现异常现象——那些看起来奇怪、缺失或破碎的事物。
+
+第二段（核心观点）：
+
+
+新想法源于对异常和知识缺口的敏锐观察。分形般的知识结构意味着越接近边缘，空白点越明显。日常生活中隐藏着无数值得探索的异常点。
+
+第三段（对从业者的启发）：
+技术创新者应主动寻找知识边界的不完整之处。深入研究未被解答的看似简单的疑问，往往能激发出独特而有价值的创新想法。
+</think>
+
+Paul Graham在这篇文章中分享了他对创新来源的深入思考。他提到有人用GPT基于他的文章构建了问答系统，并向GPT询问好想法的来源，但GPT的回答虽然尚可，却并非他本人的真实观点。他认为，获得新想法的核心方法是注意异常现象——那些看起来奇怪、缺失或破碎的事物。这一能力不仅存在于日常生活中（大量脱口秀素材都来源于此），更存在于</div>
+  
+  <a class="read-original" href="http://www.paulgraham.com/getideas.html" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>
