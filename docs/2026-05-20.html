@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年05月20日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年05月20日  |  共 2 篇来自 2 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. datasette-llm 0.1a8 发布：修复响应链收集 bug</a><span class="cat-label">🤖 AI / 机器学习</span></li>
+
+
+<li><a href="#article-2">2. AI大牛Karpathy加入Anthropic，回归LLM研究前沿</a><span class="cat-label">🤖 AI / 机器学习</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>🤖 AI / 机器学习</h2>
+
+
+<div class="article" id="article-1">
+  <h3>datasette-llm 0.1a8 发布：修复响应链收集 bug</h3>
+  <div class="article-meta">
+    <span>📝 simonwillison.net</span>
+    <span>🕐 2026-05-19 20:28</span>
+    <span class="category-tag">AI</span>
+  </div>
+  
+  <div class="detail"><think>
+这篇文章是Simon Willison发布的datasette-llm插件0.1a8版本发布说明。让我用5-8句话写中文解读：
+
+第一段：内容概述
+第二段：核心观点/数据
+第三段：对从业者的启发
+
+需要注意：
+- 只输出解读文本
+- 专有名词保留英文
+- 5-8句话
+- 三段式结构
+</think>
+
+datasette-llm 0.1a8版本已正式发布，这是Datasette生态系统中用于LLM集成的插件重要更新。该版本修复了`llm_prompt_context()`钩子函数中的一个关键bug，该bug导致在收集响应链（response chains）时不完整。新版本确保了插件在依赖LLM上下文时能够正确获取完整的响应链路，解决了多步骤AI推理流程中的数据丢失问题。datasette-llm定位为其他插件可依赖的LLM集成基础层，其稳定性直接影响整个生态的工具链可靠性。此修复体现了Simon Willison对Datasette生态系统的持续维护态度。对于插件开发者而言，这意味着在构建依赖LLM上下文的数据处理管道时，可以更可靠地获取完整的多轮对话上下文；对于Datasette用户而言，使用AI相关功能时将获得更一致的体验。建议相关开发者及时升级至0.1a8版本以获得此修复。</div>
+  
+  <a class="read-original" href="https://simonwillison.net/2026/May/19/datasette-llm/#atom-everything" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-2">
+  <h3>AI大牛Karpathy加入Anthropic，回归LLM研究前沿</h3>
+  <div class="article-meta">
+    <span>📝 daringfireball.net · John Gruber</span>
+    <span>🕐 2026-05-19 15:42</span>
+    <span class="category-tag">AI</span>
+  </div>
+  
+  <div class="detail"><think>
+用户要求我作为资深科技编辑，写一段5-8句话的完整中文解读，包含三个部分：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+需要保持专有名词英文（GPT、Transformer、Rust等），只输出解读文本，不加其他内容。
+
+让我来写：
+
+文章内容：Andrej Karpathy宣布加入Anthropic，这是AI领域的一位重要人物，他共同创立了OpenAI，曾在特斯拉担任AI总监，现在又回到LLM研究前沿。
+
+核心观点/数据：Karpathy的职业生涯轨迹（OpenAI→Tesla→OpenAI→Eureka Labs→Anthropic），他创造了"vibe coding"概念，他对教育保持热情。
+
+对从业者的启发：对AI从业者来说，这显示了前沿研究的吸引力，人才在行业内的流动，以及教育和研究的双重价值。
+</think>
+
+AI领域知名研究者Andrej Karpathy正式宣布加入Anthropic，将重新投身LLM研究与开发。Karpathy是OpenAI的联合创始人之一，2017-2022年间曾担任特斯拉AI总监，直接向Elon Musk汇报，2023年回归OpenAI后于2024年离职并创立了AI教育公司Eureka Labs。他此前还创造了"vibe coding"这一概念，在开发者社区广为流传。Karpathy表示未来几年LLM前沿将进入特别关键的形成期，他对能回到研究与开发一线感到兴奋，同时承诺将逐步恢复教育相关工作。
+
+Karpathy的职业轨迹堪称AI行业的缩影：他的每一次选择都折射出行业趋势的变化——从OpenAI创立初期参与AGI探索，到特斯拉推动自动驾驶AI落地，再到今年重返Anthropic专注LLM前沿，反映了大模型研究仍处于快速迭代期，对顶尖人才的吸引力丝毫未减。他创造的"vibe coding"概念虽然并非严格技术术语，却精准捕捉了当前AI辅助编程的某种范式转变，显示顶级研究者对行业动态的敏锐洞察</div>
+  
+  <a class="read-original" href="https://x.com/karpathy/status/2056753169888334312" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>
