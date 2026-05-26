@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年05月26日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年05月26日  |  共 4 篇来自 4 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. Quoridor棋盘游戏求解技术突破</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-2">2. WorkOS Pipes：帮助应用安全连接第三方账户的集成方案</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-3">3. PHP发送HTTP头后继续执行耗时任务技巧</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-4">4. Q-Link兴衰史：从游戏流媒体到 AOL 前身的逆袭</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>💻 科技 / 技术</h2>
+
+
+<div class="article" id="article-1">
+  <h3>Quoridor棋盘游戏求解技术突破</h3>
+  <div class="article-meta">
+    <span>📝 grantslatton.com</span>
+    <span>🕐 2026-05-25 20:01</span>
+    <span class="category-tag">科技</span>
+  </div>
+  
+  <div class="detail"><think>用户要求我作为资深科技编辑，用5-8句话写完整中文解读，包括三部分内容。我需要：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+让我分析这篇文章：
+- 作者Grant Slatton在Quoridor棋盘游戏求解方面取得突破
+- 提出了新技术，能在普通笔记本上求解面积≤28的几乎所有棋盘配置
+- 验证了奇数高度棋盘不一定是后手胜利（与传统观点相反）
+- 关键技术突破在于处理"合法墙放置"规则的性能问题
+
+核心要点：
+- 新技术让5x5、8x3、7x4等小棋盘完全可解
+- 推翻"奇数高度棋盘后手必胜"的假设
+- 关键发现：奇数棋盘在低墙数时是后手胜利，但在高墙数时变成先手胜利
+
+我需要用5-8句话写完三段内容，不加其他内容。
+</think>
+
+文章介绍了Grant Slatton在Quoridor棋盘游戏求解领域的重大突破，通过新颖的算法技术实现了在消费级笔记本上对面积≤28的棋盘配置（如5x5、8x3、7x4等）进行近乎完整求解。核心突破在于解决了"合法墙壁放置"约束检查的性能瓶颈，使得几乎所有小规模棋盘配置都能被完全解决。研究发现推翻了此前关于奇数高度棋盘"后手必胜"的假设，证明5x5棋盘在≤4墙时确实是后手胜利，但在>4墙时转变为先手胜利，揭示了跳棋 parity 优势与节奏优势的复杂博弈关系。对AI游戏开发者和博弈论研究者而言，这项工作表明小规模Quoridor已完全可解，下一步可聚焦于9x9标准棋盘的近似求解与强AI对手构建，同时Parity/zugzwang局势分析</div>
+  
+  <a class="read-original" href="https://grantslatton.com/solving-quoridor" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-2">
+  <h3>WorkOS Pipes：帮助应用安全连接第三方账户的集成方案</h3>
+  <div class="article-meta">
+    <span>📝 daringfireball.net · John Gruber</span>
+    <span>🕐 2026-05-25 15:09</span>
+    <span class="category-tag">科技</span>
+  </div>
+  
+  <div class="detail"><think>这篇文章是关于WorkOS Pipes的产品文档介绍。让我分析主要内容并按照要求写解读。
+
+第一段：讲文章内容
+WorkOS Pipes是一个集成方案，帮助应用安全连接第三方账户。它支持GitHub、Slack、Google等常见服务，让开发者无需自行管理OAuth流程、token刷新逻辑或凭证存储。
+
+第二段：提炼核心观点/数据
+主要特点：1) 简化OAuth集成流程 2) 提供预构建UI的Widget 3) 支持自定义OAuth凭证配置 4) 提供redirect URI、scopes等配置选项
+
+第三段：对从业者的启发
+对开发者/产品经理的价值：减少开发工作量、提升安全性、加快集成速度等
+
+让我用5-8句话完整写出来：
+</think>
+
+WorkOS Pipes是WorkOS推出的第三方账户连接集成方案，允许用户安全地将GitHub、Slack、Google、Salesforce等主流服务账户绑定到应用中。开发者无需自行实现OAuth流程、管理token刷新逻辑或处理凭证存储等复杂环节，大幅降低集成工作量。配置流程通过WorkOS Dashboard完成，支持使用开发者自己的OAuth凭证，包括设置client ID、secret和所需scopes，并可自定义连接描述以向用户说明数据使用方式。Pipes提供预构建的Widget组件，为用户呈现可用的服务列表并简化授权流程，通过WorkOS API完成身份验证和连接管理。该方案的核心价值在于将多服务OAuth集成标准化，让开发者专注于自身业务逻辑而非身份集成基础设施的重复建设。对API开发者而言，采用Pipes可显著减少安全相关开发工作，降低凭证管理风险；对产品团队而言，快速上线第三方服务连接功能能提升用户留存率和企业客户满意度。目前WorkOS支持的主流服务商数量持续增加，若遇未收录服务可联系团队定制接入。</div>
+  
+  <a class="read-original" href="https://workos.com/docs/pipes?utm_source=daringfireball&utm_medium=newsletter&utm_campaign=q22026" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-3">
+  <h3>PHP发送HTTP头后继续执行耗时任务技巧</h3>
+  <div class="article-meta">
+    <span>📝 shkspr.mobi · @edent</span>
+    <span>🕐 2026-05-25 11:34</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">/etc/</span><span class="tag">HowTo</span><span class="tag">php</span></div>
+  <div class="detail"><think>这是一篇关于PHP技巧的技术文章。我需要：
+1. 第一段：描述文章内容
+2. 第二段：提炼核心观点/数据
+3. 第三段：对从业者的启发
+
+需要用5-8句话，保持中文，保留专有名词。
+</think>
+
+这篇来自shkspr.mobi的文章介绍了一个PHP小技巧：如何在发送HTTP响应头后继续执行耗时后台任务。通常PHP的正常流程会阻塞等待所有代码执行完毕，导致客户端必须等很久才能收到响应。作者发现可以通过填充output buffer并强制flush来实现“假寐”效果——服务器默认有4096字节的缓冲区，当缓冲区填满后就会开始发送内容，此时客户端已经收到响应，而PHP进程可以继续在后台执行sleep等耗时操作。关键代码是用str_repeat填满buffer后立即flush，这样HTTP头和部分内容送达后，PHP就能继续处理sleep(10)这样的长任务，最终客户端只收到302重定向，无需等待。Python Requests这类库会等待完整响应，而curl等工具在收到部分内容后就会开始处理，因此这个技巧对curl完全有效。对PHP开发者来说，这提供了一种无需Fork子进程或配置cron job的轻量级后台任务方案，适合处理统计、通知发送等非紧急的后台工作。</div>
+  
+  <a class="read-original" href="https://shkspr.mobi/blog/2026/05/php-simple-way-to-send-http-headers-before-a-script-ends/" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-4">
+  <h3>Q-Link兴衰史：从游戏流媒体到 AOL 前身的逆袭</h3>
+  <div class="article-meta">
+    <span>📝 dfarq.homeip.net · Dave Farquhar</span>
+    <span>🕐 2026-05-25 11:00</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">Retro Computing</span></div>
+  <div class="detail"><think>
+用户要求我作为资深科技编辑，用5-8句话写完整中文解读，包含三段：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+要求专有名词保留英文（GPT、Transformer、Rust等），只输出解读文本，不加其他内容。
+
+文章内容：Q-Link/Quantum Link的发展史，从1983年的Play Net开始，经历Control Video，到1985年重组成为Q-Link，最终成为AOL前身的故事。
+
+让我写解读：
+
+第一段（内容）：讲述Q-Link如何从Play Net、Control Video演变而来，1985年重组，1985年11月5日正式营业。
+
+第二段（核心观点/数据）：
+- 1983年Play Net开始运营，使用Commodore 64 + Stratus minicomputer + PL/1
+- 1985年5月24日Control Video重组为Quantum Link
+- 1985年11月5日开业
+- 关键人物Steve Case后来成为AOL CEO
+- Play Net因容量和收入问题失败
+- Commodore想要合作但不想要自己运营
+
+第三段（启发）：
+- 失败的技术/产品可以被重新利用
+- 找到合适的合作伙伴比拥有技术更重要
+- 专注核心能力，非核心业务外包是可行的策略
+- 在市场变化中灵活转型的重要性
+
+
+- 组建团队时看重人才和管理能力，而不是单纯的技术堆砌
+
+让我组织成5-8句话：
+</think>
+
+1985年5月24日，Control Video更名为Quantum Link（简称Q-Link），开启了从游戏流媒体基础设施向家庭电脑在线服务的转型之路。这一切源于1983年的Play Net——一个基于Commodore 64和Stratus minicomputer的在线服务，因定价过低导致收入不足以支撑容量扩张而陷入困境。Play Net曾寻求Commodore收购，但Commodore对其管理层不感兴趣，只愿寻求合作而非自</div>
+  
+  <a class="read-original" href="https://dfarq.homeip.net/quantum-link-aol-before-it-was-aol/?utm_source=rss&utm_medium=rss&utm_campaign=quantum-link-aol-before-it-was-aol" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>

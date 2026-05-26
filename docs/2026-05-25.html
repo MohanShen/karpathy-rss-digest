@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年05月25日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年05月25日  |  共 5 篇来自 4 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. datasette-agent 0.1a4 发布：LLM驱动的智能代理</a><span class="cat-label">🤖 AI / 机器学习</span></li>
+
+
+
+
+<li><a href="#article-2">2. Datasette 1.0a30 发布：新增可定制 Jump to 菜单</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-3">3. 用Claude采访自己：技术内容创作的困境与解法</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-4">4. AI编程代理：一场代价昂贵的错误</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-5">5. ShinyHunters沉寂两周后卷土重来，声称新攻击三家美国公司</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>🤖 AI / 机器学习</h2>
+
+
+<div class="article" id="article-1">
+  <h3>datasette-agent 0.1a4 发布：LLM驱动的智能代理</h3>
+  <div class="article-meta">
+    <span>📝 simonwillison.net</span>
+    <span>🕐 2026-05-24 23:19</span>
+    <span class="category-tag">AI</span>
+  </div>
+  <div class="tags"><span class="tag">datasette</span><span class="tag">datasette-agent</span></div>
+  <div class="detail"><think>
+用户要求我作为资深科技编辑，写一段5-8句的完整中文解读。需要包含：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+4. 专有名词保留英文（GPT、Transformer、Rust等）
+5. 只输出解读文本，不加其他内容
+
+让我分析这篇文章：
+- 这是Simon Willison的博客文章
+- 主题是datasette-agent 0.1a4版本发布
+- datasette-agent是一个LLM驱动的智能代理
+- 利用了Datasette 1.0a30新增的makeJumpSections() JavaScript插件钩子
+- 在Jump菜单中添加了"Start a new agent chat"界面
+- 用户可以通过GitHub账号登录agent.datasette.io体验
+
+现在写解读：
+
+第一段（内容）：
+datasette-agent 0.1a4版本正式发布，这是一款由LLM驱动的智能代理，专为开源数据探索工具Datasette打造。新版本充分利用了Datasette 1.0a30新增的makeJumpSections() JavaScript插件钩子，在数据查询界面中嵌入了AI代理聊天入口，用户只需按下"/"键即可呼出Jump菜单并启动新的代理对话。
+
+第二段（核心观点/数据）：
+
+
+该版本展现了AI代理与传统数据工具的深度融合。通过创新的JavaScript插件机制，实现了无缝的交互体验，体现了Simon Willison在AI与数据交互领域的前沿思考。开发者可借鉴其插件架构，探索AI代理在不同工具中的集成方案。
+
+第三段（启发）：
+这不仅是技术实现，更是一种将AI能力融入现有工作流程的创新范式。通过轻量级的插件机制，降低了AI集成的技术门槛，为开发者提供了新的交互设计思路。
+</think>
+
+datasette-agent 0.1a4版本正式发布，这是一款由LLM驱动的智能代理，专为开源数据探索工具Datasette打造。新版本</div>
+  
+  <a class="read-original" href="https://simonwillison.net/2026/May/24/datasette-agent/#atom-everything" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+<div class="category">
+<h2>💻 科技 / 技术</h2>
+
+
+<div class="article" id="article-2">
+  <h3>Datasette 1.0a30 发布：新增可定制 Jump to 菜单</h3>
+  <div class="article-meta">
+    <span>📝 simonwillison.net</span>
+    <span>🕐 2026-05-24 23:52</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">projects</span><span class="tag">datasette</span><span class="tag">annotated-release-notes</span></div>
+  <div class="detail"><think>用户要求我作为资深科技编辑，用5-8句话写完整中文解读。格式要求：
+1. 第一段：讲文章内容
+2. 第二段：提炼核心观点/数据
+3. 第三段：说对从业者的启发
+4. 专有名词保留英文（GPT、Transformer、Rust等）
+5. 只输出解读文本，不加其他内容
+
+让我分析这篇文章：
+- 这是Simon Willison发布的Datasette 1.0a30 alpha版本发布说明
+- 主要新功能：可定制的"Jump to..."菜单
+- 引入了新的plugin hook: jump_items_sql()
+- 可以在 latest.datasette.io 体验（按 / 键）
+- Datasette是一个开源的数据探索和发布工具
+
+现在我来写解读：
+
+第一段（内容）：Datasette 1.0a30 alpha版本发布，主要亮点是新增了可定制的"Jump to..."菜单功能。该功能允许用户通过按下/键快速访问菜单，菜单内容可通过新的jump_items_sql()插件钩子进行扩展。
+
+第二段（核心观点/数据）：核心是新增的jump_items_sql()插件hook机制，插件开发者可以通过这个接口注册自定义的跳转项目，扩展Datasette的导航能力。Datasette是一个开源的数据多用途工具（open source multi-tool），专门用于数据探索和数据发布。
+ 
+对于数据工具开发者而言，这个插件机制体现了现代数据平台高度可扩展的设计理念。开发者可以通过自定义跳转菜单，显著提升数据平台的导航效率和用户体验。这种灵活的插件架构为数据工具的定制和扩展提供了新的可能性。
+</think>
+
+
+
+Datasette 1.0a30 alpha版本正式发布，这是一个开源数据探索与发布工具。新版本最重要的功能是新增可定制的"Jump to..."菜单，用户可通过按下/键快速调出该菜单进行导航。该菜单的核心创新在于引入了jump_items_sql()插件hook，允许开发者通过插件机制向菜单中添加自定义跳转项目。Simon Willison在官方博客详细</div>
+  
+  <a class="read-original" href="https://simonwillison.net/2026/May/24/datasette/#atom-everything" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-3">
+  <h3>用Claude采访自己：技术内容创作的困境与解法</h3>
+  <div class="article-meta">
+    <span>📝 xania.org</span>
+    <span>🕐 2026-05-24 16:55</span>
+    <span class="category-tag">科技</span>
+  </div>
+  
+  <div class="detail"><think>The user wants me to write a Chinese interpretation of the article, following a specific format:
+1. First paragraph: describe the article content
+2. Second paragraph: extract core viewpoints/data
+3. Third paragraph: provide enlightenment for practitioners
+4. Use 5-8 complete Chinese sentences
+5. Keep English technical terms as they are
+6. Only output the interpretation, nothing else
+
+Let me summarize the article first:
+- Author: Matt Godbolt (known for Compiler Explorer)
+- Method: Used Claude to interview himself about technical content creation
+- Main topic: The gap between accurate-but-impenetrable and polished-but-slightly-wrong technical content
+- Core examples: Grady Hillhouse (Practical Engineering), Devin Stone (LegalEagle), Brady Haran shows (Numberphile, Computerphile)
+- Key insight: The format itself is the solution - having experts who can explain OR having well-prepared interviewers paired with carefully chosen experts
+
+Let me write this in Chinese following the requirements:
+
+第一段(内容): 这篇文章讲什么
+第二段(观点/数据): 核心观点
+第三段(启发): 对从业者的启发
+
+需要包含:
+- LLM interview format
+- Matt Godbolt
+- 两种失败模式: accurate-but-impenetrable / polished-but-slightly-wrong
+- 示例: Grady Hillhouse, LegalEagle, Brady Haran, Numberphile, Computerphile
+- 关键洞察: format itself is the trick
+
+Let me draft:
+</think>
+
+文章讲述了Matt Godbolt尝试用Claude对自己进行采访，探讨技术内容创作领域长期存在的困境。他观察到大量技术材料要么准确但晦涩难懂，要么表达流畅但细节有误，这两种失败模式在业界都非常普遍。通过自我对话，他梳理了成功的解决路径，并指出现有优秀案例的共同特征——要么是真正的一线从业者直接创作（如Practical Engineering、LegalEagle），要么是通过精心设计的采访格式来</div>
+  
+  <a class="read-original" href="http://xania.org/202605/walking-the-dog?utm_source=feed&utm_medium=rss" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-4">
+  <h3>AI编程代理：一场代价昂贵的错误</h3>
+  <div class="article-meta">
+    <span>📝 geohot.github.io</span>
+    <span>🕐 2026-05-24 00:00</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">jekyll</span><span class="tag">update</span></div>
+  <div class="detail"><think>文章是geohot（传奇黑客）写的关于AI编程代理的看法。主要观点：AI agent不能真正编程，只是模拟编程的统计模型；虽然能解决数学问题但编程不行；作者试了6个月用agent做tinygrad和逆向芯片，发现不如手工；AI有用但不是软件工程师。
+</think>
+
+geohot（天才黑客）近期撰文警告：AI编程代理将成为软件工程史上代价最昂贵的错误之一。他指出，Agent本质上是高度精密的统计模型，仅在模拟代码的分布模式，而非真正具备编程能力。其输出看似合理，实则暗藏缺陷，且随着模型准确率提升，这种缺陷愈发难以察觉。geohot坦诚自己曾因“身份焦虑”抗拒这一判断，但随后亲测6个月：用Agent编写tinygrad部分代码、逆向USB转PCIe芯片，发现始终不如手工效率高——“Agent把进度前置给你，随后留给你一台老虎机让你反复拉，期待它完成收尾工作，但永远不会真正抵达终点”。他强调已尝试各种模型、工具链和提示词技巧，问题不在于使用方法。他认可AI作为“更好的Google”确实有用，能快速生成不在乎质量的原型demo，但距离成为Software Engineer相去甚远。对从业者的启示：当下AI编程代理更多是“代码生成器”而非“工程师替代品”，核心差距在于对系统全局的理解、对边界条件的判断、以及在不确定性中做出架构决策的能力。短期内，正确姿势是将Agent定位为辅助工具而非决策者——用它加速实现而非帮你决定做什么，尤其在高可靠性系统中仍需人工严格把关。</div>
+  
+  <a class="read-original" href="https://geohot.github.io//blog/jekyll/update/2026/05/24/the-eternal-sloptember.html" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-5">
+  <h3>ShinyHunters沉寂两周后卷土重来，声称新攻击三家美国公司</h3>
+  <div class="article-meta">
+    <span>📝 troyhunt.com · Troy Hunt</span>
+    <span>🕐 2026-05-24 01:34</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">Weekly update</span></div>
+  <div class="detail"><think>用户要求我以资深科技编辑的身份，用5-8句话写完整中文解读。结构要求：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+4. 专有名词保留英文（GPT、Transformer、Rust等）
+5. 只输出解读文本，不加其他内容
+
+让我分析这篇文章：
+- ShinyHunters是一个臭名昭著的黑客组织
+- 他们沉寂两周后又重新活跃
+- 声称攻击了3家美国公司：DentaQuest（牙科福利管理公司）、Charter Communications（Spectrum的母公司）、还有一家未完整显示
+- DentaQuest网站显示"Access Denied"
+- 文章提到之前的Instructure勒索事件，猜测可能支付了赎金
+- 作者Troy Hunt指出很多事件最终都以支付赎金告终
+
+我需要用中文写5-8句话的解读，分三段：
+
+第一段（内容概述）：
+ShinyHunters黑客组织沉寂两周后再次活跃，高调声称攻击了三家美国公司，包括牙科福利管理公司DentaQuest和电信巨头Charter Communications。
+
+第二段（核心观点/数据）：
+沉寂两周后卷土重来显示勒索软件黑客难以收手。DentaQuest网站出现"Access Denied"提示，暗示可能已遭数据泄露。
+
+第三段（从业者启发）：
+
+
+对于网络安全从业者，这起事件揭示了几个关键防御要点。组织必须持续保持警惕，不能因短暂平静而松懈。预防性网络安全措施至关重要，特别是针对关键基础设施的防护。及早建立完善的应急响应机制，能够最大程度降低潜在损失。
+</think>
+
+沉寂两周后，臭名昭著的勒索软件组织ShinyHunters卷土重来，高调宣布对三家美国公司发起新攻击，受害者包括牙科福利管理机构DentaQuest以及电信巨头Charter Communications（旗下拥有Spectrum品牌）。其中DentaQuest官网已显示“Access Denied”访问拒绝提示</div>
+  
+  <a class="read-original" href="https://www.troyhunt.com/weekly-update-505/" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>
