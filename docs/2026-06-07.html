@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年06月07日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年06月07日  |  共 3 篇来自 3 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. 使用LLM Agent开发新项目的经验与教训</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-2">2. 包管理器安全周报：供应链防护与文档隔离升级</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-3">3. 用MicroPython和WASM构建Python代码沙箱</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>💻 科技 / 技术</h2>
+
+
+<div class="article" id="article-1">
+  <h3>使用LLM Agent开发新项目的经验与教训</h3>
+  <div class="article-meta">
+    <span>📝 eli.thegreenplace.net · Eli Bendersky</span>
+    <span>🕐 2026-06-06 17:38</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">misc</span><span class="tag">Go</span><span class="tag">Machine Learning</span><span class="tag">WebAssembly</span></div>
+  <div class="detail"><think>The user wants me to write a Chinese summary of this article about using LLM agents for new project development. I need to follow the format:
+1. First paragraph: content of the article
+2. Second paragraph: core viewpoints/data
+3. Third paragraph: inspiration for practitioners
+
+Key points from the article:
+- Author used LLM agents for a project called "watgo" (Go language, new project not rewrite)
+- Process: iterate on design with agent, use Markdown file for API design
+- Keep CLs (change lists) small and reviewable
+- Sometimes large CLs require extensive cleanup and refactoring afterward
+- Productivity gains exist but are less dramatic than some claim
+- The article was cut off but discusses "keeping the human in the loop"
+
+Let me write the summary:</think>
+
+这篇文章分享了作者使用LLM Agent开发新项目watgo（Go语言项目）的经验。作者从设计阶段开始与Agent迭代API，将设计文档以Markdown形式提交到仓库；在开发阶段保持CL小而可审查，遇到需要大改的情况会先提交再单独进行重构。作者指出Agent有时能在单个CL中产生数天的工作量，但后续清理和重构也需要大量人工指导，总体仍是效率提升但不如某些宣传那样夸张。作者还强调在当前Agent能力下，有必要将项目分类处理、保持人工监督。</div>
+  
+  <a class="read-original" href="https://eli.thegreenplace.net/2026/thoughts-on-starting-new-projects-with-llm-agents/" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-2">
+  <h3>包管理器安全周报：供应链防护与文档隔离升级</h3>
+  <div class="article-meta">
+    <span>📝 nesbitt.io · Andrew Nesbitt (andrew@ecosyste.ms)</span>
+    <span>🕐 2026-06-06 10:00</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">package-managers</span><span class="tag">weekly</span></div>
+  <div class="detail"><think>用户要求我作为资深科技编辑，用5-8句话写完整中文解读。
+
+结构要求：
+- 第一段：讲文章内容
+- 第二段：提炼核心观点/数据
+- 第三段：对从业者的启发
+
+规则：
+- 专有名词保留英文（GPT、Transformer、Rust等）
+- 只输出解读文本，不加其他内容
+
+让我分析这篇文章的内容：
+
+这是一篇关于包管理器安全的一周总结文章，来源是nesbitt.io。主要内容包括：
+
+1. **Bundler 4.0.13** - 引入Cooldown功能，配置时间窗口防止刚发布几天的恶意gem版本被安装；还有RubyGems 4.0.13阻止符号链接逃逸
+
+2. **Packagist供应链系列文章**：
+   - 关闭Composer的下载回退路径
+   - 阻止所有Composer版本的恶意下载
+   - 强制组织使用安全的Composer版本
+
+3. **HexDocs新URL** - 从hexdocs.pm/package迁移到package.hexdocs.pm，实现同源策略隔离
+
+4. **Homebrew Tap-Trust** - 即将改变非官方tap的加载方式，需要显式信任
+
+现在我来写解读：
+
+第一段（文章内容）：
+这篇文章总结了本周包管理器领域的安全更新，涵盖Ruby、Bundler、Composer和Elixir/Erlang生态。
+
+Bundler 4.0.13引入了Cooldown机制来防御供应链攻击，RubyGems 4.0.13修复了符号链接逃逸漏洞。Packagist发布系列文章详细阐述了Composer供应链防护方案，包括关闭下载回退路径、阻止恶意下载和版本强制策略。HexDocs迁移到子域名架构实现文档隔离，Homebrew则推出Tap-Trust机制。
+
+从安全角度看，这些更新反映出包管理器的防护策略正在从被动修补转向主动隔离。Bundler的Cooldown机制通过时间窗口延迟安装来应对新版本攻击，而HexDocs和Homebrew的改动则通过架构</think></div>
+  
+  <a class="read-original" href="https://nesbitt.io/2026/06/06/this-week-in-package-management.html" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-3">
+  <h3>用MicroPython和WASM构建Python代码沙箱</h3>
+  <div class="article-meta">
+    <span>📝 simonwillison.net</span>
+    <span>🕐 2026-06-06 03:53</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">python</span><span class="tag">sandboxing</span><span class="tag">ai</span><span class="tag">datasette</span><span class="tag">webassembly</span></div>
+  <div class="detail"><think>The user wants me to write a Chinese interpretation of an article about building a Python code sandbox using MicroPython and WASM. Let me analyze the article content and structure it according to the requirements.
+
+The article is by Simon Willison, a well-known developer and blogger. He discusses building a Python code sandbox using MicroPython compiled to WebAssembly.
+
+Key points from the article:
+1. He's been experimenting with sandboxing approaches for years
+2. He released an alpha package called "micropython-wasm"
+3. He's using it for Datasette Agent's code execution sandbox plugin called "datasette-agent-micropython"
+4. The motivation is for plugin systems - plugin code currently runs with full privileges
+5. He wants to be able to run plugin code in an isolated environment where it can't read files, connect to network, etc.
+6. WebAssembly looks promising for this
+7. MicroPython can be compiled to WebAssembly
+
+I need to write:
+- First paragraph: Article content (5-8 sentences)
+- Second paragraph: Core viewpoints/data (5-8 sentences)
+- Third paragraph: Insights for practitioners (5-8 sentences)
+
+Let me write this in Chinese with English technical terms preserved.
+</think>
+
+
+本文介绍Simon Willison如何利用MicroPython和WebAssembly技术构建Python代码沙箱。Willison是开源项目Datasette、LLM的作者，长期受困于插件系统的安全隐患——现有插件基于Python和Pluggy框架开发，代码以完整权限执行，存在被恶意或buggy插件破坏系统的风险。他尝试过多种沙箱方案，最终选定WebAssembly作为核心技术路径，因为WASM天然具备内存隔离和受限执行环境的特性。MicroPython作为轻量级Python实现，可被编译为WASM格式，在浏览器或服务器环境中运行。他发布了alpha版本的micropython-wasm包，并基于此构建了datasette-agent-micropython插件，为Datasette Agent提供安全的代码执行能力。 该方案的核心价值在于</div>
+  
+  <a class="read-original" href="https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/#atom-everything" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>
