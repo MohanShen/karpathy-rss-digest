@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年06月14日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年06月14日  |  共 2 篇来自 2 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. SQLite查询结果列的源表追踪方法</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-2">2. 包管理周报：npm安全强化与供应链防护更新</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>💻 科技 / 技术</h2>
+
+
+<div class="article" id="article-1">
+  <h3>SQLite查询结果列的源表追踪方法</h3>
+  <div class="article-meta">
+    <span>📝 simonwillison.net</span>
+    <span>🕐 2026-06-13 23:05</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">python</span><span class="tag">sqlite</span><span class="tag">datasette</span></div>
+  <div class="detail"><think>这篇文章来自Simon Willison的博客，发表于2026年6月13日，讨论了一个技术问题：如何在SQLite查询结果中追踪每一列的源表和源列（table.column）。
+
+让我按照要求写中文解读：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+4. 专有名词保留英文
+</think>
+
+Simon Willison在本文中探讨了如何追踪SQLite查询结果中每一列的来源表和来源列（table.column）。他希望通过Datasette实现让任意SQL查询结果能够显示更丰富的元数据信息。为此他使用Claude Code来研究解决方案，最终发现了三种可行方法：使用第三方库apsw通过cursor.description_full直接访问、使用ctypes桥接调用SQLite的C函数sqlite3_column_table_name()（该函数在Python标准sqlite3模块中未暴露），以及通过解析EXPLAIN输出来反推列来源。这三种方法的核心原理是SQLite内部其实已经计算了这些信息，只是标准Python接口没有暴露出来。对于需要在Python应用中追踪SQL列来源的开发者而言，如果不想引入额外依赖，可以考虑纯stdlib的ctypes方案或解析EXPLAIN输出；如果项目允许依赖apsw，则是最直接的解决方案。</div>
+  
+  <a class="read-original" href="https://simonwillison.net/2026/Jun/13/sqlite-column-provenance/#atom-everything" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-2">
+  <h3>包管理周报：npm安全强化与供应链防护更新</h3>
+  <div class="article-meta">
+    <span>📝 nesbitt.io · Andrew Nesbitt (andrew@ecosyste.ms)</span>
+    <span>🕐 2026-06-13 10:00</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">package-managers</span><span class="tag">weekly</span></div>
+  <div class="detail"><think>用户要求我作为资深科技编辑，用5-8句话写完整中文解读文章。结构要求：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+需要保留专有名词的英文（GPT、Transformer、Rust等），只输出解读文本，不加其他内容。
+
+让我分析这篇文章的主要内容：
+- 这是一篇包管理周报，第四期
+- 来源是nesbitt.io
+- 主要内容涉及npm安全更新、uv audit新功能、pnpm安全加固、Composer插件白名单
+
+核心要点：
+1. GitHub宣布npm v12的破坏性变更（7月）
+   - npm install停止运行依赖生命周期脚本，除非通过allowScripts字段允许
+   - 隐式node-gyp构建被阻止
+   - Git依赖和远程URL tarballs停止默认解析
+   - npm 11.16.0+已有警告
+
+2. uv audit - Python依赖漏洞扫描新命令
+   - 扫描已知漏洞和项目状态（如弃用）
+   - 实验性恶意软件检查（UV_MALWARE_CHECK=1）
+
+3. pnpm 11.5.3和10.34.2 - 安全加固
+   - packageManager bootstrap路径加固
+   - 配置文件只从可信源读取
+   - 验证下载binary的npm registry签名
+   - 环境变量不能展开到registry URLs
+   - Node.js下载验证SHASUMS256.txt
+
+4. Composer插件白名单
+   - 组织级别的Private Packagist客户可用
+
+现在用5-8句话写解读：
+</think>
+
+本周包管理周报聚焦供应链安全强化。GitHub宣布npm v12将于7月带来破坏性变更，npm install将默认阻止依赖生命周期脚本执行、隐式node-gyp构建以及Git依赖和远程tarball解析，用户需通过--allowScripts、--allow-git、--allow-remote等显式</div>
+  
+  <a class="read-original" href="https://nesbitt.io/2026/06/13/this-week-in-package-management.html" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>
