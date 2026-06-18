@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年06月17日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年06月17日  |  共 4 篇来自 4 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. 生产环境调试血泪史：Copilot让我栽了跟头</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-2">2. Datasette-Tailscale插件发布：本地数据库轻松接入Tailnet</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-3">3. 开源项目易手机制盘点：维护者决定与开放领养</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-4">4. 如何获得新想法</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>💻 科技 / 技术</h2>
+
+
+<div class="article" id="article-1">
+  <h3>生产环境调试血泪史：Copilot让我栽了跟头</h3>
+  <div class="article-meta">
+    <span>📝 idiallo.com · rss@idiallo.com</span>
+    <span>🕐 2026-06-16 20:18</span>
+    <span class="category-tag">科技</span>
+  </div>
+  
+  <div class="detail"><think>
+文章内容：
+作者是一个独立开发者，运营个人博客十年。他最近决定重新设计网站，同时想改进底层代码。他用GitHub Copilot辅助重构代码，最初还很谨慎，逐行审查AI生成的代码。但后来他变得懒惰，让AI自己更新了一些废弃函数。部署后发现网站返回500错误，但日志里没有任何错误信息。服务器上多个PHP进程占用100% CPU，重启服务器和PHP-FPM都无法解决，只能重启整个机器。
+
+他发现本地环境是PHP 8.4，生产环境是PHP 8.3。升级生产环境到8.3后问题依旧。最后通过逐行调试发现问题根源：Copilot修改了一个Markdown库的代码，导致解析Markdown时出现无限递归。回滚该修改后问题解决。但后来又有读者报告网站宕机，文章在A/B测试部分被截断了。
+
+核心观点/数据：
+- PHP进程100% CPU占用是问题症状
+- PHP 8.3 vs PHP 8.4环境差异
+- Copilot修改了Markdown库的"deprecated functions"
+- 问题只发生在生产环境，本地无法复现
+- 独立开发者运营了10年的博客
+
+对从业者的启发：
+- AI辅助编程时必须保持批判性思维，不能盲目信任
+- 第三方依赖库（如Markdown库）不应该被AI随意修改
+
+
+- 生产环境与本地环境的版本差异会产生难以追踪的问题
+- 500错误但日志无记录时，资源占用（CPU）是排查的关键信号
+- 代码变更必须经过严格的版本控制和回滚预案
+</think>
+
+作者是独立开发者，运营个人博客十年。网站重新设计期间，他用GitHub Copilot辅助重构底层代码。起初他逐行审查AI生成的代码，但逐渐变得懒惰，让Copilot自主更新了一些deprecated functions。部署后发现网站返回500错误，日志却完全空白，多个PHP进程CPU占用100%。重启PHP-FPM和Web服务器都无效，必须重启整台机器。他发现本地环境是PHP</div>
+  
+  <a class="read-original" href="https://idiallo.com/blog/debugging-on-prod" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-2">
+  <h3>Datasette-Tailscale插件发布：本地数据库轻松接入Tailnet</h3>
+  <div class="article-meta">
+    <span>📝 simonwillison.net</span>
+    <span>🕐 2026-06-16 16:18</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">datasette</span><span class="tag">tailscale</span></div>
+  <div class="detail"><think>文章内容：
+Simon Willison发布了datasette-tailscale插件的0.1a0版本，这是一个非常实验性的alpha插件，允许用户在Tailscale网络中运行Datasette实例。用户可以通过命令行启动本地Datasette服务器，同时运行一个Tailscale sidecar将其连接到Tailnet，使得http://datasette-preview/可以访问Datasette。该插件使用了tailscale-rs库的Python bindings。
+
+核心观点/数据：
+- 这是一个实验性alpha版本（0.1a0）
+- 使用tailscale-rs的Python bindings
+- 通过--ts-authkey和--ts-hostname参数配置
+- 实现方式是Tailscale sidecar机制
+
+对从业者的启发：
+- 展示了将本地工具安全暴露到私有网络的轻量级方案
+- Python bindings与Rust库的结合是可行的技术路径
+- 为本地开发工具的网络化共享提供了新思路
+
+让我用5-8句话写完整中文解读：
+</think>
+
+
+Simon Willison发布了datasette-tailscale插件0.1a0版本，这是一个实验性alpha插件，让用户可以通过简单命令在Tailscale私有网络中运行Datasette实例。通过指定`--ts-authkey`和`--ts-hostname`参数，启动的localhost Datasette服务器会自动连接Tailscale sidecar，从而在Tailnet内通过`http://datasette-preview/`访问数据。该插件利用了tailscale-rs库的Python bindings实现与Tailscale的集成。核心亮点在于这是将本地数据工具快速、安全接入私有Tailnet的轻量级方案，展示了Python与Rust生态互操作的可行性。技术实现上，插件通过sidecar模式在Datasette进程旁运行Tailscale客户端，而非深度系统集成。对数据工程师而言，这意味着可以零配置地将本地SQLite数据库共享给团队成员，无需公网暴露或复杂VPN配置，同时保留了Tailscale的端到端加密和访问控制特性。这种模式也为其他本地开发工具的网络化共享提供了参考范例。</div>
+  
+  <a class="read-original" href="https://simonwillison.net/2026/Jun/16/datasette-tailscale/#atom-everything" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-3">
+  <h3>开源项目易手机制盘点：维护者决定与开放领养</h3>
+  <div class="article-meta">
+    <span>📝 nesbitt.io · Andrew Nesbitt (andrew@ecosyste.ms)</span>
+    <span>🕐 2026-06-16 10:00</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">open-source</span><span class="tag">maintainers</span><span class="tag">reference</span></div>
+  <div class="detail"><think>
+用户要求我作为资深科技编辑，用5-8句话写完整中文解读，包含三段：
+1. 第一段：讲文章内容
+2. 第二段：提炼核心观点/数据
+3. 第三段：对从业者的启发
+
+要求专有名词保留英文（GPT、Transformer、Rust等），只输出解读文本，不加其他内容。
+
+让我分析这篇文章的内容：
+- 来源：nesbitt.io
+- 主题：开源项目维护权转移的机制盘点
+- 文章列出了开源项目易主/死亡的多种方式，重点讨论维护权转移的机制
+
+主要内容：
+1. 维护者决定模式
+   - 选定的继承者（Chosen successor）：维护者私选继承人，几乎没有基础设施支持
+   - 事件：event-stream和xz事件都是这种机制的问题案例
+   - CPAN的HANDOFF机制：有个pseudo-user标记
+
+2. 继承者设置（GitHub Account Successors）
+   - 2020年GitHub推出，可指定继承人
+   - 需要死亡证明+7天等待，或讣告+21天等待
+   - 仅覆盖repos，不覆盖registry账户
+
+3. 开放领养（Open adoption）
+   - 维护者标记项目可领养
+   - CPAN的ADOPTME和NEEDHELP pseudo-users
+   - RubyGems在2014年也提出过类似的采用机制
+
+核心观点：
+- 开源维护权转移缺乏基础设施支持
+- event-stream和xz事件暴露了"维护者私人决定"模式的安全漏洞
+- GitHub的account successors是目前最系统化的方案，但仍局限于单一平台
+- 各个registry（CPAN、RubyGems等）在维护权转移上有不同的实现方式，但缺乏统一标准
+
+对从业者的启发：
+- 开源项目需要建立更规范的维护权转移机制
+- 安全事件（如xz）提醒我们需要更严格的继承者验证流程
+- 平台层面
+</think></div>
+  
+  <a class="read-original" href="https://nesbitt.io/2026/06/16/how-open-source-projects-change-hands.html" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-4">
+  <h3>如何获得新想法</h3>
+  <div class="article-meta">
+    <span>📝 paulgraham.com</span>
+    <span>🕐 近期</span>
+    <span class="category-tag">科技</span>
+  </div>
+  
+  <div class="detail"><think>
+用户希望我作为资深科技编辑，用5-8句话写完整中文解读，按照三段式结构：
+1. 第一段：讲文章内容
+2. 第二段：提炼核心观点/数据
+3. 第三段：对从业者的启发
+
+需要保留专有名词的英文，如GPT、Transformer、Rust等。
+
+文章内容分析：
+- Paul Graham讨论如何获得新想法
+- 他指出获取新想法的关键是发现异常（anomalies）：那些看起来奇怪、缺失或broken的事物
+- 日常生活可以发现异常（很多standup comedy基于此）
+- 最好的异常在知识前沿寻找
+- 知识增长是分形的
+- 从远处看知识边界是光滑的，但靠近时会发现很多gap
+- 这些gap看起来很明显，让人觉得奇怪为什么没人尝试x或思考y
+- 探索这些gap会产生新的分形萌芽
+
+让我写解读：
+</think>
+
+Paul Graham在这篇2023年的文章中，探讨了如何获得新想法这一根本性问题。他指出，获得新想法的核心方法是发现“异常”（anomalies）——即那些看起来奇怪、缺失或有问题的现象。Graham强调，虽然日常生活中的异常也值得注意，但寻找新想法的最佳场所是知识的边界前沿。他用分形（fractal）来比喻知识的增长：远看知识边界似乎光滑，但当你深入学习到足够程度靠近它时，会发现大量明显的缺口，这些缺口就是潜在的创新机会。
+
+核心观点可归纳为三点：首先，新想法源于对异常的敏锐观察；其次，知识前沿才是创新者的主战场；第三，这些前沿海量的gap往往显得显而易见，让人困惑为何无人尝试。Graham认为，探索这些gap往往能催生全新的分支领域。
+
+对从业者的启发在于：与其在已知领域内卷式竞争，不如主动向自己专业边界的深处探索。培养“异常感”比积累知识更重要——当你能看出某个领域看似正常却存在明显gap时，真正的创新机会就在那里。同时，这种对异常的发掘能力，也是当前</div>
+  
+  <a class="read-original" href="http://www.paulgraham.com/getideas.html" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>
