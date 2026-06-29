@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年06月28日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年06月28日  |  共 4 篇来自 3 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. Bash花括号展开的树形遍历原理解析</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-2">2. 消失的波兰语Ś：Medium平台三十年键盘Bug始末</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-3">3. 调和数的位数估计与Python计算</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+
+
+<li><a href="#article-4">4. 微软Xbox涨价并停产2TB型号</a><span class="cat-label">📈 商业 / 行业</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>💻 科技 / 技术</h2>
+
+
+<div class="article" id="article-1">
+  <h3>Bash花括号展开的树形遍历原理解析</h3>
+  <div class="article-meta">
+    <span>📝 johndcook.com · John</span>
+    <span>🕐 2026-06-28 00:33</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">Computing</span></div>
+  <div class="detail"><think>
+用户要求我作为资深科技编辑，写一段5-8句话的完整中文解读，分三段：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+内容是关于Bash花括号展开(brace expansion)原理的技术文章，通过一个打印30个英文单词的Crazy one-liner来解释其工作原理。
+
+让我来写：
+
+第一段（内容）：介绍这篇文章讲述的是Bash花括号展开的原理，通过一个Peter Krumins发现的Crazy one-liner作为例子，这个命令可以打印出30个英文单词。文章通过树形图和深度优先遍历来解释Bash如何处理嵌套的花括号展开。
+
+第二段（核心观点/数据）：
+- 逗号是分隔符而非终止符，所以{w,t,}等于{w,t,""}
+- 两个花括号表达式相乘时产生笛卡尔积，如{A,B}{1,2,3}产生A1 A2 A3 B1 B2 B3
+- Bash对树结构进行深度优先遍历(depth-first traversal)来展开所有可能性
+- 30个英文单词来自{w,t,}和{e…,ither,at}的组合
+
+第三段（启发）：
+- 对Shell脚本开发者来说，理解brace expansion可以写出更简洁高效的命令
+
+
+- 可以用少量字符生成大量组合，这在文本处理和测试数据生成时特别有用
+- 深度优先遍历是算法基础，理解这个概念有助于更好地理解Bash和其他工具的工作方式
+</think>
+
+这篇文章解析了一个巧妙的Bash one-liner：echo {w,t,}h{e{n{,ce{,forth}},re{,in,fore,with{,al}}},ither,at}，它仅用一行代码就能打印出30个英文单词。作者通过树形图直观展示了Bash如何处理嵌套的花括号展开，指出其核心机制是对语法树进行深度优先遍历(depth-first traversal)。
+
+文章揭示了几个关键原理：逗</div>
+  
+  <a class="read-original" href="https://www.johndcook.com/blog/2026/06/27/brace-expansion-tree/" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-2">
+  <h3>消失的波兰语Ś：Medium平台三十年键盘Bug始末</h3>
+  <div class="article-meta">
+    <span>📝 aresluna.org · Marcin Wichary</span>
+    <span>🕐 2026-06-27 21:20</span>
+    <span class="category-tag">科技</span>
+  </div>
+  
+  <div class="detail"><think>The user wants me to write a complete Chinese interpretation of this article about a keyboard bug with the Polish character Ś on Medium. Let me analyze the content:
+
+1. First paragraph: Article content - someone reported a bug where the Polish character Ś wouldn't type on Medium, and the author investigates why this specific character among all Polish characters was affected.
+
+2. Second paragraph: Core观点/data - The bug was caused by four incidental factors spanning decades. The key data points include:
+- Polish adds 9 additional diacritics using Latin characters
+- Polish words never contain Q, V or X
+- Typewriters had to accommodate extra letters by promoting some to separate keys (Ł and Ż) and sharing others with digits
+- The article mentions 4 ingredients that came together
+
+3. Third paragraph: 对从业者的启发 - What developers should learn from this bug.
+
+The article appears to be cut off, so I only have the first of four ingredients. I should work with what's provided.
+
+Let me write a proper interpretation in 5-8 sentences, organized in three paragraphs as specified:
+- First paragraph: content summary
+- Second paragraph: core insights/data
+- Third paragraph: implications for practitioners
+
+Key points to cover:
+- The bug affected specifically Ś, not other Polish characters
+- 4 factors combined over decades to cause this
+- Polish language has 9 diacritics, no Q/V/X
+- Typewriter history and how they handled extra letters
+- The lesson about how legacy systems and seemingly unrelated factors combine
+</think>
+
+
+这篇来自aresluna.org的技术博客讲述了Medium平台上一个持续三十年的波兰语字符Bug：用户在使用波兰语写作时，无法输入字母Ś，而波兰语的其他32个特殊字符均正常工作。作者通过深入调查发现，这并非随机故障，而是四个跨越数十年（甚至数百年）的偶然因素叠加导致的罕见问题。波兰语属于斯拉夫语系中使用拉丁字母的语言，它用9个附加变音符号替代了原本英文</div>
+  
+  <a class="read-original" href="https://aresluna.org/the-curious-case-of-the-disappearing-polish-s" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-3">
+  <h3>调和数的位数估计与Python计算</h3>
+  <div class="article-meta">
+    <span>📝 johndcook.com · John</span>
+    <span>🕐 2026-06-27 01:51</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">Math</span><span class="tag">Number theory</span></div>
+  <div class="detail"><think>
+用户要求我作为资深科技编辑，用5-8句话写完整中文解读。结构要求：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+4. 专有名词保留英文（GPT、Transformer、Rust等）
+
+让我分析这篇文章：
+- 主题：调和数（Harmonic number）的位数估计与Python计算
+- 内容：讨论第n个调和数Hn的分子分母位数估计方法
+- 核心公式：调和数的分母约是1到n的最小公倍数，渐进为exp(n)
+- Python实现：用Fraction库计算调和数并验证位数估计
+- 验证数据：n=50和n=1000的例子，理论与实践吻合
+
+现在按照要求写解读：
+
+第一段（内容概述）：介绍文章讨论调和数的分子分母位数估计问题，以及如何用Python验证。
+
+第二段（核心观点/数据）：提炼关键公式和验证结果。
+
+第三段（启发）：对从业者的意义。
+</think>
+
+这篇博文探讨了第n个调和数（Harmonic number）Hn的分子与分母位数估计方法。作者指出，调和数可写为分数p/q形式，其中分母q是1到n的最小公倍数，其规模渐进为exp(n)。通过数论中的质数定理估算，分母在base b下约有n/log(b)位，分子约有(n+log log(n))/log(b)位。作者用Python的Fraction库验证了n=50和n=1000两个案例，理论与实际结果高度吻合——n=50时实际分子23位、分母22位，估计值为22.3和21.7位；n=1000二进制下实际分子1448位、分母1438位，估计值为1445.4和1442.7位。
+
+核心结论是调和数的位数增长主要取决于n本身而非log(n)的系数修正，且</div>
+  
+  <a class="read-original" href="https://www.johndcook.com/blog/2026/06/26/writing-down-harmonic-numbers/" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+<div class="category">
+<h2>📈 商业 / 行业</h2>
+
+
+<div class="article" id="article-4">
+  <h3>微软Xbox涨价并停产2TB型号</h3>
+  <div class="article-meta">
+    <span>📝 daringfireball.net · John Gruber</span>
+    <span>🕐 2026-06-27 22:15</span>
+    <span class="category-tag">商业</span>
+  </div>
+  
+  <div class="detail"><think>The user wants me to write a Chinese interpretation of a news article about Microsoft Xbox price increases and discontinuation of the 2TB model. I need to follow the specific format:
+- Paragraph 1: Article content (5-8 sentences total)
+- Paragraph 2: Core viewpoints/data
+- Paragraph 3: Inspiration for practitioners
+- Keep English terms (like Xbox, Transformer, Rust)
+- Only output the interpretation, nothing else
+</think>
+
+
+微软Xbox宣布自2026年8月1日起在全球范围内调整售价，512GB型号涨价100美元，1TB型号涨价150美元，同时停产2TB型号。这是继2024年10月美国市场涨价20-70美元后的又一次大幅调整。官方解释称，2024年至今，零部件和存储芯片价格已上涨超过2.5倍，预计到2027年秋季还将再翻一番。微软强调，与手机、电脑等消费电子不同，游戏主机通常以低于成本的价格销售，硬件本身不盈利，因此承受成本压力更大。
+
+核心数据显示，零部件成本在不到两年内上涨250%，且涨势将持续至2027年。Xbox主机硬件长期低于成本定价的商业模式，使其在供应链危机中格外脆弱。Xbox Series S仍为入门级最低价选择。
+
+对游戏从业者的启发：成本控制与硬件定价策略需要重新审视，订阅服务（Game Pass等）的收入贡献对维持硬件生态至关重要；Buy Now Pay Later、分期付款、二手翻新等多元购买方案将成为缓解消费者价格敏感度的关键手段；认证翻新机的规模化运营可能成为新的利润增长点。</div>
+  
+  <a class="read-original" href="https://news.xbox.com/en-us/2026/06/25/xbox-console-price-update/" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>
