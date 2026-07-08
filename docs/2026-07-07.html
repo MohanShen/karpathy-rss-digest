@@ -39,7 +39,7 @@
 <div class="container">
 <h1>Karpathy RSS 实时精选</h1>
 <div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
-<div class="meta">📅 2026年07月07日  |  共 3 篇来自 2 个博客  |  由 AI 自动生成中文解读</div>
+<div class="meta">📅 2026年07月07日  |  共 1 篇来自 1 个博客  |  由 AI 自动生成中文解读</div>
 
 <div class="toc">
 <h3>📑 目录</h3>
@@ -48,13 +48,7 @@
 
 
 
-<li><a href="#article-1">1. Apple 为 Markdown 引入官方 UTI 标识符</a><span class="cat-label">💻 科技 / 技术</span></li>
-
-
-<li><a href="#article-2">2. 什么是真正的Mac风格应用</a><span class="cat-label">💻 科技 / 技术</span></li>
-
-
-<li><a href="#article-3">3. 几何定理图形的 Python 绘制方法</a><span class="cat-label">💻 科技 / 技术</span></li>
+<li><a href="#article-1">1. 腾讯发布Hy3: 295B参数MoE大模型</a><span class="cat-label">🤖 AI / 机器学习</span></li>
 
 
 </ul>
@@ -63,125 +57,45 @@
 
 
 <div class="category">
-<h2>💻 科技 / 技术</h2>
+<h2>🤖 AI / 机器学习</h2>
 
 
 <div class="article" id="article-1">
-  <h3>Apple 为 Markdown 引入官方 UTI 标识符</h3>
+  <h3>腾讯发布Hy3: 295B参数MoE大模型</h3>
   <div class="article-meta">
-    <span>📝 daringfireball.net · John Gruber</span>
-    <span>🕐 2026-07-06 20:38</span>
-    <span class="category-tag">科技</span>
+    <span>📝 simonwillison.net</span>
+    <span>🕐 2026-07-06 23:57</span>
+    <span class="category-tag">AI</span>
   </div>
-  
-  <div class="detail"><think>
-用户要求我作为资深科技编辑，用5-8句话写完整的解读，包含三个部分：
+  <div class="tags"><span class="tag">ai</span><span class="tag">generative-ai</span><span class="tag">llms</span><span class="tag">pelican-riding-a-bicycle</span><span class="tag">llm-release</span></div>
+  <div class="detail"><think>用户要求我作为资深科技编辑，用5-8句话写完整中文解读。内容分三段：
 1. 第一段讲文章内容
 2. 第二段提炼核心观点/数据
 3. 第三段说对从业者的启发
 
-需要保留专有名词的英文，如Apple、Markdown、UTI、UTF-8等。
+需要输出纯解读文本，不加其他内容。
 
-让我分析文章内容：
-- Apple发布了macOS/iOS等27个操作系统的第三个开发者测试版
-- Apple在开发者文档中新增了一个页面，引入了官方的Markdown Uniform Type Identifier (UTI)
-- 新的UTI标识符是：net.daringfireball.markdown
-- 该UTI符合：public.utf8-plain-text
-- 文章作者John Gruber之前建议使用public.plain-text，但需要指定UTF-8编码
-- 现在他更新了建议为public.utf8-plain-text
-- 提到2004年时UTF-8支持还不普遍，现在已经完全不同
+让我分析这篇文章的核心信息：
+- 腾讯发布Hy3 MoE大模型
+- 295B参数总量，21B活跃参数，3.8B MTP层参数
+- Apache 2.0开源许可
+- 598GB完整模型，300GB FP8量化
+- 256K上下文长度
+- 在OpenRouter免费试用至7月21日
+- 性能优于同类规模模型，可比肩2-5倍参数的旗舰开源模型
+- 来自腾讯Hy团队
 
-核心观点/数据：
-- UTI标识符：net.daringfireball.markdown
-- 符合类型：public.utf8-plain-text
-- 涉及27个OS的开发者测试版
-
-对从业者的启发：
-- 开发者应该使用新的官方UTI标识符来处理Markdown文件
-- 应该将Markdown的类型声明从public.plain-text更新为public.utf8-plain-text
-
-
-- UTF-8已获得Apple官方认可，成为处理Markdown内容的标准编码方式。这标志着技术生态系统中对多语言文本支持的成熟，开发者在处理Markdown时应遵循这一新标准。
-</think>
-
-Apple在发布macOS、iOS等27个操作系统的第三个开发者测试版时，于开发者文档中新增了官方Markdown Uniform Type Identifier标识符：**net.daringfireball.markdown**，该标识符符合**public.utf8-plain-text**类型。Markdown创始人John Gruber（daringfireball.net作者）指出，此前他建议开发者使用**public.plain-text**并手动指定UTF</div>
-  
-  <a class="read-original" href="https://developer.apple.com/documentation/uniformtypeidentifiers/uttype-swift.struct/markdown" target="_blank">📖 阅读英文原文 →</a>
-</div>
-
-
-<div class="article" id="article-2">
-  <h3>什么是真正的Mac风格应用</h3>
-  <div class="article-meta">
-    <span>📝 daringfireball.net · John Gruber</span>
-    <span>🕐 2026-07-06 17:13</span>
-    <span class="category-tag">科技</span>
-  </div>
-  
-  <div class="detail"><think>The user wants me to write a Chinese interpretation of this article (which appears to be a podcast review/description from Daring Fireball). Let me break it down:
-
-1. The content is about "Accidental Tech Podcast" (ATP) members-only episode discussing what constitutes a true "Mac-style" application
-2. Core points: explaining what makes a Mac app feel like a Mac app, and why both users and developers should care about this
-3. It's a promotional recommendation for ATP membership ($8/month or $88/year)
-
-Let me write a proper interpretation in Chinese with three paragraphs as instructed:
-- First paragraph: content overview
-- Second paragraph: core viewpoints/data
-- Third paragraph: implications for practitioners
-
-I need to keep technical terms in English like Mac, Transformer, etc. The content doesn't mention Transformer, but I should use whatever technical terms are actually in the source material.
-
-The source material is about:
-- ATP (Accidental Tech Podcast) members-only episode
-- Topic: What makes a "Mac-assed Mac app" (true Mac-style application)
-- Why users and developers should care
-- ATP membership pricing: $8/month or $88/year
-- Gruber recommends it
-
-Let me write this out:
+现在组织成三段式解读：
 </think>
 
 
-这篇内容是John Gruber在Daring Fireball上推荐的一期Accidental Tech Podcast（ATP）付费会员专属节目。节目中深入探讨了什么是真正的"Mac风格"应用——即那种在设计哲学、交互细节和用户体验上都充分遵循macOS平台规范的原生应用。主播们不仅解释了如何从技术实现层面判断一个应用是否具有"Mac灵魂"，还从用户和开发者的双重视角分析了追求这种设计理念的实际意义。节目质量获得Gruber的高度评价，被形容为"精彩绝伦"。
+腾讯旗下Hy团队于2026年7月6日发布了Hy3大模型，这是一款采用Apache 2.0开源协议的2950亿参数MoE架构模型，总参数量295B中仅21B为活跃参数，同时配备38亿MTP层参数。Hy3在4月底预览版基础上，收集了50多款产品的反馈意见，并利用更高质量的预训练数据进行规模化后训练，定位为可媲美参数量达其2-5倍的旗舰开源模型。该模型完整版大小为598GB，FP8量化版本仅300GB，支持256K超长上下文，目前已在OpenRouter平台开放免费试用至7月21日。
 
-核心观点可归纳为三点：第一，真正的Mac风格应用不是简单的界面适配，而是深入理解Apple人机交互指南后的系统性设计；第二，这种设计标准对用户意味着更低的认知负荷和</div>
+从性能指标看，Hy3的核心优势在于稀疏激活机制带来的高效率——仅用21B活跃参数处理任务，却能达到与更大规模闭源模型相当的输出质量。Apache 2.0许可意味着商业使用零门槛，这对于企业级AI应用具有重要意义。模型体积与量化后的300GB存储需求，使其在中等规模GPU集群上具备部署可行性。腾讯通过产品反馈驱动迭代的开发模式，也值得业界关注。
+
+对于AI</div>
   
-  <a class="read-original" href="https://atp.fm/atp-dev-mac-assed-mac-apps" target="_blank">📖 阅读英文原文 →</a>
-</div>
-
-
-<div class="article" id="article-3">
-  <h3>几何定理图形的 Python 绘制方法</h3>
-  <div class="article-meta">
-    <span>📝 johndcook.com · John</span>
-    <span>🕐 2026-07-06 14:22</span>
-    <span class="category-tag">科技</span>
-  </div>
-  <div class="tags"><span class="tag">Math</span><span class="tag">Geometry</span></div>
-  <div class="detail"><think>The user wants me to write a Chinese interpretation of this article about geometric theorem diagrams using Python. Let me analyze the content and write in the specified format.
-
-The article is about:
-1. Drawing geometric diagrams in Python to illustrate a theorem
-2. The theorem involves a unit circle with diameter AB, and a perpendicular line CD
-3. There are three inscribed circles (blue, green, orange) - the blue one is inscribed in a triangle, while the green and orange are inscribed in a shape with two perpendicular sides and a circular arc
-4. The theorem states that the diameter of the blue circle equals the sum of the radii of the green and orange circles
-5. The article provides Python code to draw this diagram
-
-Let me write the interpretation following the instructions:
-- First paragraph: content of the article
-- Second paragraph: core insights/data
-- Third paragraph: inspiration for practitioners
-- 5-8 sentences total
-- Technical terms in English (Python, matplotlib, numpy, etc.)
-- Only output the interpretation, nothing else
-</think>
-
-
-这篇文章介绍如何用 Python 绘制几何定理图示，作者发现相比定理本身，复现图形的过程更有趣。文章涉及一个单位圆，AB 为直径，CD 垂直于直径，图中包含三个内切圆——蓝色圆内切于三角形，绿色和橙色圆则内切于由两条垂直线段和一个圆弧组成的三边图形。计算内切圆半径时，关键是利用圆心到切线的距离等于半径这一几何性质，结合圆心到原点的距离为 1−r 的约束条件，通过求解二次方程得出半径值。定理的核心结论是蓝色圆的直径等于绿色圆和橙色圆半径之和，这一优雅的几何关系在代码中通过 numpy 和 matplotlib 得以精确验证与呈现。
-
-核心观点可提炼为：看似复杂的几何图形可以通过代数方法（求解二次方程）精确计算其参数，而 Python 的数值计算能力使这种几何可视化变得简单高效。关键数据</div>
-  
-  <a class="read-original" href="https://www.johndcook.com/blog/2026/07/06/arc-hypotenuse/" target="_blank">📖 阅读英文原文 →</a>
+  <a class="read-original" href="https://simonwillison.net/2026/Jul/6/hy3/#atom-everything" target="_blank">📖 阅读英文原文 →</a>
 </div>
 
 </div>
