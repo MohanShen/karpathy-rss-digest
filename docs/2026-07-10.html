@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年07月10日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年07月10日  |  共 2 篇来自 2 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. Meta发布Muse Spark 1.1：首个提供API的Spark模型</a><span class="cat-label">🤖 AI / 机器学习</span></li>
+
+
+
+
+<li><a href="#article-2">2. 修复#pragma detect_mismatch错误后仍报错的原因</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>🤖 AI / 机器学习</h2>
+
+
+<div class="article" id="article-1">
+  <h3>Meta发布Muse Spark 1.1：首个提供API的Spark模型</h3>
+  <div class="article-meta">
+    <span>📝 simonwillison.net</span>
+    <span>🕐 2026-07-09 16:24</span>
+    <span class="category-tag">AI</span>
+  </div>
+  <div class="tags"><span class="tag">ai</span><span class="tag">generative-ai</span><span class="tag">llms</span><span class="tag">llm</span><span class="tag">meta</span></div>
+  <div class="detail"><think>用户要求我作为资深科技编辑，用5-8句话写完整中文解读，包含三段：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+要求专有名词保留英文（GPT、Transformer、Rust等），只输出解读文本，不加其他内容。
+
+让我分析这篇文章：
+- Meta发布了Muse Spark 1.1
+- 这是首个提供API的Spark模型
+- 主要改进：agentic tool calling和computer use
+- 有评估报告提到"Attractor States in Self-Conversation"有趣的实验
+- Simon Willison获得了预览访问权限，创建了llm-meta-ai插件
+- 演示了用SVG生成"骑自行车的鹈鹕"
+
+现在来写解读：
+
+第一段（内容）：Meta发布了Muse Spark 1.1，这是首个提供API的Spark模型版本，在agentic tool calling和computer use方面有显著改进。Simon Willison获得预览权限后，开发了llm-meta-ai插件，让用户可以通过LLM CLI和Python库访问该模型。
+
+第二段（核心观点/数据）：
+- 首个提供API的Spark模型
+- 评估报告中有"Attractor States in Self-Conversation"有趣现象
+- 自对话实验产生哲学性陈述
+
+
+- Muse Spark 1.1在工具调用和计算机操作能力上实现突破，为开发者提供更灵活的集成方式
+
+第三段（对从业者的启发）：开源模型提供API接口标志着企业级应用的关键转变，llm-meta-ai插件展示的本地部署可能性降低了AI应用开发的技术门槛。开发者应关注Spark模型在复杂任务执行上的进展，特别是在自动化工作流中的潜在应用。
+
+同时，多代理自对话实验揭示了模型推理的新维度，为理解和优化AI系统提供了独特的视角。
+</think>
+
+
+Meta于2026年7月发布了Muse Spark 1.1，这是首个提供官方API的Spark模型版本，在agentic tool calling和</div>
+  
+  <a class="read-original" href="https://simonwillison.net/2026/Jul/9/muse-spark-1-1/#atom-everything" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+<div class="category">
+<h2>💻 科技 / 技术</h2>
+
+
+<div class="article" id="article-2">
+  <h3>修复#pragma detect_mismatch错误后仍报错的原因</h3>
+  <div class="article-meta">
+    <span>📝 devblogs.microsoft.com/oldnewthing · Raymond Chen</span>
+    <span>🕐 2026-07-09 14:00</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">Old New Thing</span><span class="tag">Code</span></div>
+  <div class="detail"><think>
+The user wants me to write a Chinese interpretation of this Microsoft DevBlogs article about #pragma detect_mismatch errors persisting after fixing them. I need to follow the format:
+
+1. First paragraph: describe the article content
+2. Second paragraph: extract core points/data
+3. Third paragraph: implications for practitioners
+
+Keep it 5-8 sentences total, with technical terms in English (like #pragma detect_mismatch, ODR, library, object file, etc.)
+</think>
+
+某开发者修复了#pragma detect_mismatch错误后项目仍报错。原因是同事同步了一个修改过的公共头文件配置，重建项目后冲突仍然存在——报错显示的是一个库文件中的目标文件与项目目标文件之间的版本不匹配。由于这个库并非项目的一部分，单独重建项目并不会重建该依赖库。#pragma detect_mismatch机制通过在编译目标文件时嵌入哈希值来检测链接时的版本不一致，但一旦目标文件已编译完成，其内部记录的哈希值就已固定。文章指出，这个问题并非#pragma detect_mismatch独有，而是属于ODR（One Definition Rule）违规的范畴——任何对公共头文件的修改都需要重新编译所有依赖该头文件的目标文件，否则不同目标文件会携带不同版本的符号定义进行链接。正确的修复方法是重建依赖旧版本头文件的库，或者更安全的做法是对整个仓库进行clean rebuild，确保没有残留的旧版本目标文件。对C++开发者而言，这意味着排查链接冲突时不能仅看表面报错位置，还需追溯依赖关系链，确认是否有间接依赖的预编译库也需要同步更新。</div>
+  
+  <a class="read-original" href="https://devblogs.microsoft.com/oldnewthing/20260709-00/?p=112512" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>
