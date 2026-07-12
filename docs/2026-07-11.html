@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年07月11日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年07月11日  |  共 3 篇来自 3 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. 宏替换未改代码却导致二进制整数变化的谜案</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-2">2. 如何获得新想法</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+
+
+<li><a href="#article-3">3. 苹果起诉OpenAI及前员工，指控窃取商业机密</a><span class="cat-label">📈 商业 / 行业</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>💻 科技 / 技术</h2>
+
+
+<div class="article" id="article-1">
+  <h3>宏替换未改代码却导致二进制整数变化的谜案</h3>
+  <div class="article-meta">
+    <span>📝 devblogs.microsoft.com/oldnewthing · Raymond Chen</span>
+    <span>🕐 2026-07-10 14:00</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">Old New Thing</span><span class="tag">Code</span></div>
+  <div class="detail"><think>
+用户要求我作为资深科技编辑，写一段中文解读，需要5-8句话，包含三段：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+内容分析：
+- 这是一篇关于宏替换导致意外二进制变化的技术博客
+- 同事将NDIS_STRING_CONST宏迁移到RTL_CONSTANT_STRING宏
+- 两个宏应该产生相同结果，但二进制发生了变化
+- 四个函数改变，其中三个在同一个源文件，一个根本没被修改
+- 变化是某些整数值改变了（如62Bh变成62Ah）
+- 这是编译器的UB（undefined behavior）相关行为
+
+核心观点：
+- 看似等价的宏替换导致二进制变化
+- 变化发生在与修改无关的函数中
+- 这与编译器的UB处理有关
+
+启发：
+- 看似无害的修改可能产生意外结果
+- 编译器优化可能导致不可预测的变化
+- 需要仔细测试所有变更
+</think>
+
+这篇文章讲述了一个看似无害的宏替换却导致二进制文件发生变化的技术案例。开发团队将 `NDIS_STRING_CONST` 宏迁移到类型安全性更高的 `RTL_CONSTANT_STRING` 宏，这两种宏理论上应产生相同结果，但编译后发现四个函数（其中三个在修改的源文件，一个在未触碰的文件）的汇编代码发生了微妙变化——仅是某些整数常量值发生了细微偏移（如 `62Bh` 变为 `62Ah`）。这种看似无关的改变暴露了编译器在处理未定义行为时的不可预测性：由于原始宏写法存在某些边界情况，编译器可能在不同编译单元间进行了不一致的优化决策。核心教训是：看似语义等价的代码替换可能触发编译器内部复杂的优化逻辑，导致远端代码产生不可预期的变化。从业者应在进行任何宏修改或重构时保持警惕，即使变更目标代码看似独立，也需要对整个二进制产物进行完整回归测试，不能假设“等价替换”必然“安全”。</div>
+  
+  <a class="read-original" href="https://devblogs.microsoft.com/oldnewthing/20260710-00/?p=112514" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-2">
+  <h3>如何获得新想法</h3>
+  <div class="article-meta">
+    <span>📝 paulgraham.com</span>
+    <span>🕐 近期</span>
+    <span class="category-tag">科技</span>
+  </div>
+  
+  <div class="detail"><think>
+用户要求我作为资深科技编辑，用5-8句话写完整中文解读。需要三段式结构：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+需要输出的内容：Paul Graham的"How to Get New Ideas"文章解读。
+
+文章核心内容：
+- 通过让GPT分析其文章并回答问题，但答案不如他本人的回答
+- 核心观点：获得新想法的方法是注意异常现象——看起来奇怪、缺失或破损的东西
+- 日常生活可以发现异常（很多Standup comedy基于此）
+- 最好的地方是知识前沿
+- 知识增长是分形的：远处看边缘平滑，深入后能看到很多缺口
+- 这些缺口看起来很明显，似乎没人尝试X或思考Y
+- 最好的情况是探索这些缺口会产生新的分形芽
+
+现在写解读：
+</think>
+
+Paul Graham在这篇2023年的文章中，回应了GPT对其文章的分析并给出了自己关于“如何获得新想法”的核心答案。他指出，获得新想法的关键在于发现异常现象——那些看起来奇怪、缺失或破损的事物。他用分形（Fractal）来形容知识的增长方式：从远处看知识边缘是平滑的，但当你深入学习足够接近时，就会发现大量明显的缺口和空白。文章还提到，日常生活中的Standup comedy就是基于发现异常现象的典型例子。
+
+核心观点是：新想法源于知识边界的缺口，最有价值的发现往往出现在知识前沿——那些“看起来不可思议为什么没人尝试X或思考Y”的地方。探索这些缺口可能带来意想不到的收获。关键不是追逐热点，而是深入某个领域足够久，才能看到别人看不见的空白地带。
+
+对于从业者的启发是：与其广泛追逐信息，不如在一个领域深耕到足以接近前沿。真正的创新机会隐藏在那些看似理所当然却被忽视的缺口里——需要的是持续专注和保持对异常现象的敏感度。</div>
+  
+  <a class="read-original" href="http://www.paulgraham.com/getideas.html" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+<div class="category">
+<h2>📈 商业 / 行业</h2>
+
+
+<div class="article" id="article-3">
+  <h3>苹果起诉OpenAI及前员工，指控窃取商业机密</h3>
+  <div class="article-meta">
+    <span>📝 daringfireball.net · John Gruber</span>
+    <span>🕐 2026-07-10 21:01</span>
+    <span class="category-tag">商业</span>
+  </div>
+  
+  <div class="detail"><think>
+The user wants me to write a Chinese interpretation of this news article about Apple suing OpenAI and former employees for trade secret theft. I need to follow the specific format:
+1. First paragraph: describe the article content
+2. Second paragraph: extract core viewpoints/data
+3. Third paragraph: explain the implications for industry practitioners
+
+I need to write in Chinese, 5-8 sentences total, keep technical terms in English (like GPT, Transformer, etc.), and only output the interpretation text.
+</think>
+
+苹果今日正式对OpenAI提起诉讼，指控该公司窃取商业机密。苹果在诉状中明确指出，前苹果员工将公司的秘密和机密信息非法带到了OpenAI，涉及未发布的技术、工艺和产品。诉讼被告包括OpenAI、io Products以及两名关键前员工：曾担任iPhone和Apple Watch产品设计副总裁的Tang Tan，以及在苹果工作8年后于2026年1月加入OpenAI的高级系统电气工程师Chang Liu。
+
+核心数据显示，Tang Tan于2024年2月离职后与前苹果首席设计官Jony Ive合作，而OpenAI在去年以65亿美元收购了Ive创立的公司io，接收了超过50名工程师和开发人员。苹果在声明中强调保护团队创新成果的重要性，表示已发现“重大证据”证明OpenAI员工不当获取了苹果的保密信息。
+
+此案对科技行业从业者具有重要警示意义：人才流动不等于商业机密流动，离职员工带走的技术知识和公司专有信息必须有明确的法律边界。随着AI领域竞争加剧，各大科技公司对核心人才的争夺将更加激烈，但企业必须建立更严格的技术保密体系和竞业限制机制，否则可能面临高额诉讼和巨额赔偿风险。</div>
+  
+  <a class="read-original" href="https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>
