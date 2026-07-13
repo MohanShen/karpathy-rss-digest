@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年07月12日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年07月12日  |  共 5 篇来自 5 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. 新ChatGPT功能混乱引批评</a><span class="cat-label">🤖 AI / 机器学习</span></li>
+
+
+
+
+<li><a href="#article-2">2. sqlite-utils 4.1发布：SQLite操作工具新增代码块插入功能</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-3">3. 一周包管理器动态：npm 12发布、pnpm支持CI认证、Go与Rust安全更新</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-4">4. 向量点积：分量定义与几何定义的等价性证明</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-5">5. 如何获得新想法</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>🤖 AI / 机器学习</h2>
+
+
+<div class="article" id="article-1">
+  <h3>新ChatGPT功能混乱引批评</h3>
+  <div class="article-meta">
+    <span>📝 daringfireball.net · John Gruber</span>
+    <span>🕐 2026-07-11 22:24</span>
+    <span class="category-tag">AI</span>
+  </div>
+  
+  <div class="detail"><think>用户要求我作为资深科技编辑，用5-8句话写完整中文解读，包含三个部分：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+文章内容是关于OpenAI发布新ChatGPT功能后，因为功能复杂混乱而受到批评。OpenAI官方的Help Center文档用了大量解释性文字来说明ChatGPT、Work和Codex三个功能在网页端、移动端和桌面端的可用性差异，这种复杂性本身就是对产品设计的批评。
+
+我需要用5-8句话完成解读，保持专业科技编辑的视角。
+</think>
+
+
+这篇文章揭示了OpenAI最新ChatGPT产品策略的混乱困境。原文直接引用了OpenAI官方Help Center的说明文字，描述ChatGPT、Work和Codex三个功能在网页端、移动端、桌面端的不同可用性——网页端与桌面端对话不同步、Codex仅限桌面端、移动端只能远程访问桌面任务等复杂规则。这种“功能说明”本质上暴露了产品架构的碎片化问题。
+
+核心问题在于：OpenAI试图用单一“超级应用”整合对话、本地文件处理、代码开发等多个场景，但不同功能在不同平台的实现差异巨大，导致用户必须理解一套繁琐的规则才能正确使用。这种复杂性本身就是对“超级应用”理念的讽刺——原本应该简化用户体验的产品，反而制造了新的认知负担。
+
+对从业者的启示是：AI产品功能扩展需谨慎，跨平台一致性是基本要求。当产品功能超出核心场景时，应优先保证用户体验的连贯性，而不是用大量说明文档来弥补产品设计的不足。复杂的产品逻辑最终会转化为用户的信任成本。</div>
+  
+  <a class="read-original" href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+<div class="category">
+<h2>💻 科技 / 技术</h2>
+
+
+<div class="article" id="article-2">
+  <h3>sqlite-utils 4.1发布：SQLite操作工具新增代码块插入功能</h3>
+  <div class="article-meta">
+    <span>📝 simonwillison.net</span>
+    <span>🕐 2026-07-11 23:50</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">projects</span><span class="tag">python</span><span class="tag">sqlite</span><span class="tag">sqlite-utils</span><span class="tag">annotated-release-notes</span></div>
+  <div class="detail"><think>
+用户要求我作为资深科技编辑，用5-8句话写完整中文解读。需要包含三部分：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+需要输出的内容是关于 sqlite-utils 4.1 版本发布的解读。
+
+让我来写这个解读：
+
+sqlite-utils 4.1 发布了，这是一个 Python CLI 工具和库，用于操作 SQLite 数据库。这次更新包含了几项新功能：
+1. insert 和 upsert 命令新增 --code 选项，可以直接传入 Python 代码块定义 rows() 函数来生成要插入的数据
+2. 新增 --type 选项，可以覆盖自动推断的列类型
+3. 新增 drop_index() 方法和 drop-index 命令
+4. query 命令支持从标准输入读取 SQL
+
+核心数据和观点：
+- 这是 4.0 发布后的首个补丁版本
+- 主要改进包括代码块插入、类型覆盖、索引删除、stdin读取SQL等功能
+- 这些都是对现有功能的扩展和完善
+
+对从业者的启发：
+- --code 选项让数据插入更灵活，适合动态生成数据
+- --type 选项解决了CSV导入时类型推断问题（如邮编前导零）
+- drop_index 补全了索引操作的最后一环
+- stdin 支持便于管道操作
+
+让我组织成5-8句话：
+</think>
+
+sqlite-utils 4.1 于7月11日发布，这是该 SQLite 操作工具在 4.0 之后的首个补丁版本。主要更新包括：insert 和 upsert 命令新增 --code 选项，允许直接传入 Python 代码块定义 rows() 函数来生成要插入的数据；新增 --type column-name type 参数用于覆盖自动推断的列类型，解决 CSV 导入时 ZIP 代码等前导零被截断的问题；新增 table.drop_index() 方法和 sqlite-utils drop-index 命令用于删除索引；query 命令现在支持通过 - 参数从标准输入读取 SQL 查询语句。
+
+核心功能增强包括：代码块</div>
+  
+  <a class="read-original" href="https://simonwillison.net/2026/Jul/11/sqlite-utils/#atom-everything" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-3">
+  <h3>一周包管理器动态：npm 12发布、pnpm支持CI认证、Go与Rust安全更新</h3>
+  <div class="article-meta">
+    <span>📝 nesbitt.io · Andrew Nesbitt (andrew@ecosyste.ms)</span>
+    <span>🕐 2026-07-11 10:00</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">package-managers</span><span class="tag">weekly</span></div>
+  <div class="detail"><think>
+用户要求我以资深科技编辑的身份，用5-8句话写完整中文解读。要求：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+4. 专有名词保留英文（npm、Transformer、Rust等）
+5. 只输出解读文本，不加其他内容
+
+让我分析这篇内容：
+- 这是关于一周包管理器更新的技术文章
+- 主要涉及5个包管理器：npm、pnpm、uv、Go、Rust
+- npm 12.0.0：重大安全变更，移除shrinkwrap，权限收紧
+- pnpm 11.10-11.11：CI认证支持、self-update
+- uv 0.11.27-0.11.28：ZIP处理安全加固、性能优化
+- Go 1.26.5：安全修复
+- Rust 1.97.0：lockfile路径、warnings配置等稳定性改进
+
+现在写解读：
+</think>
+
+本周包管理器领域迎来多个重要版本集中发布。npm 12.0.0 带来史上最严格的安全策略，allow-git 和 allow-remote 默认关闭，shrinkwrap 机制被完全移除；pnpm 11.10-11.11 在 CI 场景下大幅简化认证配置，并预告了 Rust 版 v12；uv 0.11.28 修复了 ZIP 解析漏洞；Go 1.26.5 和 Rust 1.97.0 则分别修补了 crypto/tls 安全问题并增强了 lockfile 路径灵活性。
+
+核心变化集中在安全加固与 CI 友好性两个维度：npm 通过收紧默认权限强化供应链安全边界，pnpm 解决了多年困扰的跨平台环境变量转义难题，而 uv 的 ZIP 修复则堵住了一个潜在的解析器差异漏洞。
+
+对开发者而言，升级 npm 12 前需审查所有 git 依赖声明并显式配置 allow-git，</div>
+  
+  <a class="read-original" href="https://nesbitt.io/2026/07/11/this-week-in-package-management.html" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-4">
+  <h3>向量点积：分量定义与几何定义的等价性证明</h3>
+  <div class="article-meta">
+    <span>📝 eli.thegreenplace.net · Eli Bendersky</span>
+    <span>🕐 2026-07-10 18:42</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">misc</span><span class="tag">Math</span></div>
+  <div class="detail"><think>
+用户要求我作为资深科技编辑，用5-8句话写完整中文解读。需要包含三段：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+专有名词保留英文（GPT、Transformer、Rust等）。
+
+文章内容是关于向量点积两种定义的等价性证明：
+- 分量定义：a·b = Σ aᵢbᵢ
+- 几何定义：a·b = |a||b|cos(θ)
+
+文章提供了两种证明方法：
+1. 几何证明：使用余弦定理和向量的点积性质
+2. 投影证明：假设几何定义正确，推导出分量定义
+
+现在写解读：
+</think>
+
+本文来自eli.thegreenplace.net，作者探讨了向量点积在Euclidean space中两种定义的等价性问题。分量定义（Component definition）将点积表示为各分量乘积之和：$\vec{a}\cdot\vec{b}=\sum_{i=1}^{n}a_i b_i$；几何定义（Geometric definition）则通过向量模长和夹角表示：$\vec{a}\cdot\vec{b}=|\vec{a}||\vec{b}|cos(\theta)$。文章提供了两种证明路径：几何证明利用余弦定律（Law of Cosines）和点积的分配律展开推导；投影证明则从几何定义出发，通过向量投影的几何关系反推分量形式。整个证明的核心在于利用点积的自性质 $\vec{a}\cdot\vec{a}=|\vec{a}|^2$ 以及点积的代数性质作为桥梁连接两种定义。核心观点是：看似从不同角度切入的分量定义与几何定义本质上是同一数学对象的不同表述，两者通过向量的模长、夹角与坐标分量之间的内在关系相互印证。两种证明方法各有价值——几何证明更直观展示物理意义，投影证明则揭示了从几何到代数的推导逻辑</div>
+  
+  <a class="read-original" href="https://eli.thegreenplace.net/2026/dot-product-component-vs-geometric-definition/" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-5">
+  <h3>如何获得新想法</h3>
+  <div class="article-meta">
+    <span>📝 paulgraham.com</span>
+    <span>🕐 近期</span>
+    <span class="category-tag">科技</span>
+  </div>
+  
+  <div class="detail"><think>
+用户要求我作为资深科技编辑，用5-8句话写完整中文解读。需要分三段：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+文章是Paul Graham的"How to Get New Ideas"，主要讨论如何获得新想法。我需要：
+- 保留专有名词英文（GPT、Transformer等）
+- 5-8句话完整中文
+- 只输出解读文本
+
+让我组织内容：
+
+第一段（内容）：Paul Graham在文中指出，获得新想法的关键是发现异常现象——那些看起来奇怪、缺失或有缺陷的事物。他用GPT作为引子，说明当前AI对好想法来源的回答并不令人满意。Graham认为知识增长呈现分形结构，从远处看边界平滑，但深入学习后就会发现大量缺口和空白。
+
+第二段（核心观点）：Graham强调日常生活的异常现象值得关注（很多脱口秀基于此），但探索知识前沿是发现最重要异常的最佳场所。当一个人学得足够深入时，会发现明显的知识缺口——某些X从未被尝试，某些Y无人问津。最佳情况下，探索这些缺口能产生全新的"分形芽"。
+
+第三段（启发）：对从业者而言，这意味着深度学习和专注是创新想法的基础。停留在表面只能看到知识的平滑边界，只有深入特定领域才能识别真正的空白和机会。异常就是机会。
+
+从业者需要在日常观察和专业知识之间找到平衡，既保持对周围世界的好奇心，又在选定领域持续深耕，这样才能在别人忽视的地方发现创新的可能性。
+</think>
+
+Paul Graham在这篇文章中探讨了如何获得新想法。他以GPT被用来回答“好的想法从何而来”这一问题开场，指出AI的回答虽然可以，但并非他本人的观点。Graham的核心论点是：获得新想法的方法是发现异常现象——那些看起来奇怪、缺失或broken的事物。他认为日常生活中的异常值得关注（许多standup comedy的灵感来源即此），但发现最重要异常的最佳地点是知识前沿。
+
+Graham</div>
+  
+  <a class="read-original" href="http://www.paulgraham.com/getideas.html" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>
