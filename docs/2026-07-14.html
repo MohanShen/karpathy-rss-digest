@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年07月14日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年07月14日  |  共 4 篇来自 4 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. 为何不让整个栈都由保护页面组成</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-2">2. 用命令行从开源手表应用导出步数数据分析旅行步行距离</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-3">3. Code Red蠕虫：开创大规模网络攻击先河</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+
+
+<li><a href="#article-4">4. 超线性回报：为何成功者愈成功</a><span class="cat-label">📈 商业 / 行业</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>💻 科技 / 技术</h2>
+
+
+<div class="article" id="article-1">
+  <h3>为何不让整个栈都由保护页面组成</h3>
+  <div class="article-meta">
+    <span>📝 devblogs.microsoft.com/oldnewthing · Raymond Chen</span>
+    <span>🕐 2026-07-13 14:00</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">Old New Thing</span><span class="tag">Code</span></div>
+  <div class="detail"><think>
+用户要求我作为资深科技编辑，写一段5-8句话的中文解读，内容分为三段：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+需要保留专有名词的英文，如page fault、stack probe、guard page等。
+
+文章内容分析：
+- 讨论为何不让整个栈都由guard pages组成
+- 解释如果整个栈都是guard page，一次page fault可能导致分配大量内存
+- 程序可能声称需要1GB栈空间，一次内存访问就会触发分配
+- 问题在于无法终止这个过程，因为它发生在kernel mode
+- guard page只占用少量固定页面，风险可控
+
+让我组织这段解读：
+</think>
+
+这篇文章讨论了一个Windows系统设计的核心问题：为何栈只使用少量guard page而非整个栈都是保护页面。当程序访问超出当前栈范围的地址时，系统需要扩展栈空间，如果整个栈都是guard page，一次无效指针解引用可能导致任意大量的内存分配。比如程序声明需要1GB栈，那么一次栈访问就能触发1GB内存分配，造成程序假死数分钟。更大的问题在于这种分配发生在kernel mode，用户即使尝试通过任务管理器终止进程也无法阻止，程序会持续膨胀直到耗尽系统内存。核心风险在于无界内存分配和不可中断的内核操作——而固定数量的guard page则提供了可预测、有上限的内存分配成本。对开发者而言，这意味着访问栈外地址的错误可能很长时间才暴露，设计上宁可让程序快速崩溃，也不要埋下性能炸弹；同时也解释了为何调试时看到单次内存读取耗时数分钟的现象。</div>
+  
+  <a class="read-original" href="https://devblogs.microsoft.com/oldnewthing/20260713-00/?p=112528" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-2">
+  <h3>用命令行从开源手表应用导出步数数据分析旅行步行距离</h3>
+  <div class="article-meta">
+    <span>📝 shkspr.mobi · @edent</span>
+    <span>🕐 2026-07-13 11:34</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">[RSS Club]</span><span class="tag">RSS Club</span></div>
+  <div class="detail"><think>
+这篇文章来自shkspr.mobi网站，讲的是作者用开源手表应用Gadgetbridge和命令行工具来分析自己旅行期间的步数数据。作者在Interrail49天旅行中走了54.5万步，约436公里。
+
+我需要按要求写3段式解读：
+1. 第一段：讲文章内容
+2. 第二段：提炼核心观点/数据
+3. 第三段：对从业者的启发
+
+注意：
+- 5-8句话
+- 专有名词保留英文
+- 只输出解读文本
+</think>
+
+这篇文章讲述了作者利用开源手表应用 Gadgetbridge 搭配命令行工具，从设备导出的 SQLite 数据库中提取步数数据，分析了一次为期49天的 Interrail 欧洲铁路旅行中的步行总量。作者身高约1米8，据此推算步幅约80厘米，最终计算出总步行距离约436公里。 Gadgetbridge 作为开源替代方案，虽然没有图形化导出功能，但通过 SQL 查询仍可获取原始数据。作者以幽默的方式总结，自己走了相当于10场马拉松的距离，难怪需要再休个假来恢复。
+
+核心数据显示：49天旅行共记录 545,453 步，平均每天约11,132步；按步幅80cm计算，总步行距离达 436,362 米（约436公里），相当于10.4个马拉松。这一数据通过简单的 SQL COUNT 命令即可从 Gadgetbridge 数据库中提取。值得注意的是，作者坦承并非"量化自我"运动的追随者，只是用最小成本的技术方案满足了对数据的好奇心。
+
+对可穿戴设备开发者而言，Gadgetbridge 的案例说明开源固件和数据可导出性对用户社区的长期价值——当官方应用体验不佳时，用户宁愿自己动手挖掘数据库，也不愿被封闭生态绑定。对于 Quantified Self 爱好者，这篇文章提供了一个低成本的数据分析范式：购买兼容开源协议的手表、使用 Rust 或 Python 等工具直连数据库、绕过厂商数据壁垒自行处理。这种"DIY 量化"思路在隐私意识日益增强的今天显得格外有</div>
+  
+  <a class="read-original" href="https://shkspr.mobi/blog/2026/07/rss-club-half-a-million-steps-is-about-10-marathons/" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-3">
+  <h3>Code Red蠕虫：开创大规模网络攻击先河</h3>
+  <div class="article-meta">
+    <span>📝 dfarq.homeip.net · Dave Farquhar</span>
+    <span>🕐 2026-07-13 11:00</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">security</span></div>
+  <div class="detail"><think>用户要求我作为资深科技编辑，用5-8句话写完整中文解读，包含三个部分：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+需要注意：
+- 专有名词保留英文（GPT、Transformer、Rust等）
+- 只输出解读文本，不加其他内容
+- 5-8句话
+
+让我来分析这篇文章并写解读：
+
+文章内容：
+- Code Red蠕虫于2001年7月13日释放，7月15日首次被观察到
+- 由eEye Digital Security的Marc Maiffret和Ryan Permeh发现
+- 利用微软IIS中的CVE-2001-0500漏洞（Index Server ISAPI Extension缓冲区溢出）
+- 7月19日感染达到高峰，全球感染359,000台服务器
+- 促使微软推出Trustworthy Computing倡议和Patch Tuesday
+
+核心观点/数据：
+- 首个大规模混合威胁攻击
+- 359,000台服务器被感染
+- CVE-2001-0500漏洞
+- 微软一个月前已发布MS01-033补丁
+
+对从业者的启发：
+- 及时打补丁的重要性
+- 对互联网暴露设备的快速响应
+- 推动企业级补丁管理工具发展
+
+现在我来写解读：
+</think>
+
+
+2001年7月13日释放的Code Red蠕虫利用微软IIS服务器中Index Server ISAPI Extension的缓冲区溢出漏洞（CVE-2001-0500），成为首个大规模混合威胁攻击的先例。该蠕虫由eEye Digital Security的Marc Maiffret和Ryan Permeh发现，因发现时正饮用Mountain Dew Code Red饮料而得名。蠕虫感染在7月19日达到峰值，全球共有359,000台服务器受到影响，尽管微软早在一个月前已通过MS01-033公告修复该漏洞，但企业级补丁分发工具的匮乏导致大量系统未能及时更新。Code Red蠕虫事件直接</div>
+  
+  <a class="read-original" href="https://dfarq.homeip.net/code-red-worm-july-13-2001/?utm_source=rss&utm_medium=rss&utm_campaign=code-red-worm-july-13-2001" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+<div class="category">
+<h2>📈 商业 / 行业</h2>
+
+
+<div class="article" id="article-4">
+  <h3>超线性回报：为何成功者愈成功</h3>
+  <div class="article-meta">
+    <span>📝 paulgraham.com</span>
+    <span>🕐 近期</span>
+    <span class="category-tag">商业</span>
+  </div>
+  
+  <div class="detail"><think>The user wants me to write a Chinese interpretation of Paul Graham's essay "Superlinear Returns" in a specific format:
+- 5-8 sentences total
+- First paragraph: article content
+- Second paragraph: core viewpoints/data
+- Third paragraph: implications for practitioners
+- Keep English technical terms
+- Only output the interpretation, nothing else
+
+Let me analyze the article first:
+
+**Content**: Paul Graham discusses how the world operates on superlinear returns rather than linear returns. He argues that teachers and coaches tell us "you get out what you put in" but this is rarely true. In reality, if your product is half as good as competitors', you get zero customers. This pattern exists not just in business but in fame, power, military victories, knowledge, and benefit to humanity. He identifies two fundamental causes: exponential growth and thresholds.
+
+**Core viewpoints**:
+- Returns for performance are superlinear, not linear
+- This is a feature of the world, not a flaw of capitalism
+- Two causes: exponential growth and thresholds
+- Examples: bacterial cultures, startups, fame, knowledge
+- The rich get richer in all these domains
+
+**Implications for practitioners**:
+- If you're ambitious, understanding superlinear returns is crucial
+- It's the wave to surf on
+- Focus on achieving high growth rates or crossing thresholds
+- The difference between adequate and excellent is enormous
+
+Let me write this in Chinese, keeping technical terms in English:
+</think>
+
+
+保罗·格雷厄姆在这篇文章中探讨了一个他童年时未能深刻理解的重要世界规律：绩效回报是非线性的、超线性的。他指出老师和教练们常说的“你付出多少就收获多少”这句话很少真正成立——如果你的产品只比竞争对手差一点，你可能失去的不是一半客户，而是全部客户。格雷厄姆认为超线性回报并非资本主义的缺陷，而是世界的本质特征，在商业、名声、权力、军事胜利、知识乃至对人类的贡献中都普遍存在。他将超线性回报的成因归纳</div>
+  
+  <a class="read-original" href="http://www.paulgraham.com/superlinear.html" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>

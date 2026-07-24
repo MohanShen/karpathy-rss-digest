@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年07月16日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年07月16日  |  共 2 篇来自 2 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. Windows显示控制面板崩溃的无效函数指针分析</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+
+
+<li><a href="#article-2">2. Escom破产：快速扩张的代价</a><span class="cat-label">📈 商业 / 行业</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>💻 科技 / 技术</h2>
+
+
+<div class="article" id="article-1">
+  <h3>Windows显示控制面板崩溃的无效函数指针分析</h3>
+  <div class="article-meta">
+    <span>📝 devblogs.microsoft.com/oldnewthing · Raymond Chen</span>
+    <span>🕐 2026-07-15 14:00</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">Old New Thing</span><span class="tag">Code</span></div>
+  <div class="detail"><think>用户要求我作为资深科技编辑，对这篇关于Windows显示控制面板崩溃的技术博客文章进行解读。需要用5-8句话写完整中文解读，分三段：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+文章内容分析：
+- 这是一篇来自Microsoft DevBlogs (OldNewThing)的技术调试文章
+- 分析了Windows显示控制面板(Display control panel)的崩溃问题
+- 崩溃发生在ntdll!LdrpDispatchUserCallTarget函数
+- 问题根源是一个无效的函数指针：rax=ffffffff924bbde0
+- 这个地址明显是内核模式地址(高位是ffffffff)，但用户模式代码试图访问它
+- 调用栈显示崩溃发生在DestroyWindow操作期间
+- 涉及comctl32的PropertySheet相关函数
+
+核心观点/数据：
+- 无效函数指针地址：ffffffff924bbde0
+- 用户态指针通常以低地址0000开头，内核态指针以高位地址开头
+- 这是一个典型的内核/用户态指针混淆问题
+
+启发：
+- 调试Windows崩溃需要理解x64调用约定和寄存器使用
+- LdrpDispatchUserCallTarget是Windows实现indirect function call时的验证机制
+- 指针混淆(内核/用户态)是常见的安全和稳定性问题
+</think>
+
+
+这篇技术文章来自Raymond Chen的博客，分析了Windows显示控制面板(Display.cpl)在打开适配器设置页面后关闭时发生的崩溃问题。崩溃发生在ntdll!LdrpDispatchUserCallTarget函数中，调用栈显示问题出在comctl32的PropertySheet销毁窗口过程中。调试人员通过分析寄存器状态发现，指向目标函数的指针值是rax=ffffffff924bbde0，这是一个明显无效的地址。LdrpDispatchUserCallTarget是Windows用来验证间接函数调用目标地址的机制，当发现函数指针无效时就会触发崩溃。
+
+问题的核心在于</div>
+  
+  <a class="read-original" href="https://devblogs.microsoft.com/oldnewthing/20260715-00/?p=112535" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+<div class="category">
+<h2>📈 商业 / 行业</h2>
+
+
+<div class="article" id="article-2">
+  <h3>Escom破产：快速扩张的代价</h3>
+  <div class="article-meta">
+    <span>📝 dfarq.homeip.net · Dave Farquhar</span>
+    <span>🕐 2026-07-15 11:00</span>
+    <span class="category-tag">商业</span>
+  </div>
+  <div class="tags"><span class="tag">Retro Computing</span></div>
+  <div class="detail"><think>
+这是一篇关于Escom公司破产的科技历史文章。让我按照要求分析并写出中文解读。
+
+文章内容：1996年7月15日，德国PC制造商Escom宣布破产。这家公司在不到两年前才收购了Commodore和Amiga品牌。Escom是德国第二大、欧洲第十大PC制造商，在1995年4月22日以1400万美元收购了Commodore。Escom还试图通过收购Rumbelows的200家门店来扩大英国市场份额。但公司扩张过快，在1996年初损失惨重，最终导致破产。
+
+核心观点：Escom的破产不是因为收购Commodore和Amiga本身，而是因为整体扩张策略过于激进。在英国市场的门店收购规模远超Commodore收购，成为压垮公司的主因。
+
+启发：对从业者的启示是，业务扩张需要审慎评估现金流和整合风险。品牌收购本身可能是低风险的投资（1400万美元相比微软1997年投资苹果1.5亿美元），但如果同时进行大规模线下扩张而缺乏有效整合，可能导致资金链断裂。
+
+让我写5-8句完整中文解读：
+</think>
+
+1996年7月15日，德国PC制造商Escom宣告破产。这家公司在不到两年前以1400万美元收购了Commodore和Amiga品牌，当时它是德国第二大、欧洲第十大PC制造商。Escom的扩张野心不止于此，1995年5月还收购了英国连锁店Rumbelows约200家门店，加上已有的27家门店，大举进军英国零售市场。但快速扩张带来了沉重财务压力，1996年初公司即陷入严重亏损，最终在7月宣布破产。
+
+Escom破产的核心原因并非收购Commodore和Amiga，而是整体扩张策略过于激进。 Commodore收购本身风险有限——1400万美元在1995年是相对低廉的价格，连微软1997年投资苹果1.5亿美元都没获得投票权。相比之下，英国零售门店的大规模收购和整合才是真正的资金黑洞，最终导致</div>
+  
+  <a class="read-original" href="https://dfarq.homeip.net/reasons-for-escoms-bankruptcy/?utm_source=rss&utm_medium=rss&utm_campaign=reasons-for-escoms-bankruptcy" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>
