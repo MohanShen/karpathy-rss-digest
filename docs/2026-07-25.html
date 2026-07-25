@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年07月25日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年07月25日  |  共 2 篇来自 2 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. Anthropic Opus 5：迄今最难被提示注入的模型</a><span class="cat-label">🤖 AI / 机器学习</span></li>
+
+
+<li><a href="#article-2">2. AI写作文章为何糟糕</a><span class="cat-label">🤖 AI / 机器学习</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>🤖 AI / 机器学习</h2>
+
+
+<div class="article" id="article-1">
+  <h3>Anthropic Opus 5：迄今最难被提示注入的模型</h3>
+  <div class="article-meta">
+    <span>📝 simonwillison.net</span>
+    <span>🕐 2026-07-25 00:42</span>
+    <span class="category-tag">AI</span>
+  </div>
+  <div class="tags"><span class="tag">prompt-injection</span><span class="tag">anthropic</span><span class="tag">claude</span><span class="tag">generative-ai</span><span class="tag">ai</span></div>
+  <div class="detail"><think>
+用户要求我作为资深科技编辑，用5-8句话写完整的微信风格中文解读。格式要求：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+4. 专有名词保留英文
+
+文章内容分析：
+- 这是一篇来自Simon Willison博客的引用文章
+- Boris Cherny（Anthropic员工）发布了一条推文
+- 主要内容是：Anthropic的Opus 5模型是目前最难被提示注入（prompt injection）的模型
+- 虽然在系统卡片（System Card）中被埋没了，但通过PI评估和红队测试，Opus 5在抵抗提示注入方面表现出色
+- 发布时间是2025年7月25日
+
+关键数据/信息：
+- 模型名称：Opus 5
+- 公司：Anthropic
+- 关键特性：least prompt injectable model（最难被提示注入的模型）
+- 评估方式：PI evals（Prompt Injection evaluations）和 red teaming（红队测试）
+- 引用来源：System Card page 73
+
+现在我来写解读：
+</think>
+
+Anthropic研究员Boris Cherny在推文中透露，Opus 5是Anthropic迄今最难被提示注入（prompt injection）的模型。他指出，这一亮点在官方System Card中被“埋没”，但通过PI评估和红队测试（red teaming）验证，Opus 5在面对提示注入攻击时表现出了极高的抵抗力。
+
+核心信息是：Opus 5在安全对齐方面取得突破性进展，其Prompt Injection抗性显著优于前代模型。Simon Willison作为AI领域知名技术博主，专门引用了这条信息，说明这在AI安全领域具有重要意义。
+
+对于AI从业者而言，这标志着模型安全性进入新阶段。开发者在构建基于LLM的应用时，需要重新评估提示注入风险模型——模型的内在抵抗力提升意味着传统防护策略可能需要</div>
+  
+  <a class="read-original" href="https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-2">
+  <h3>AI写作文章为何糟糕</h3>
+  <div class="article-meta">
+    <span>📝 idiallo.com · rss@idiallo.com</span>
+    <span>🕐 2026-07-24 08:06</span>
+    <span class="category-tag">AI</span>
+  </div>
+  
+  <div class="detail"><think>用户要求我以资深科技编辑的身份，用5-8句话写一段完整的中文解读，包含三段：
+1. 第一段：讲文章内容
+2. 第二段：提炼核心观点/数据
+3. 第三段：对从业者的启发
+
+要求专有名词保留英文（GPT、Transformer、Rust等）。
+
+让我分析这篇文章的内容：
+- 作者探讨AI写作文章质量差的原因
+- 核心洞察：AI写作缺乏"作者"这个角色——读者和作者同时"第一次"读这篇文章
+- 传统写作中，作者是先有insight再写作，读者阅读时是在消化作者已经思考过的内容
+- AI写作时，AI只是生成文字，作者没有真正"思考"过这些内容
+- 作者只是匆匆发布，没有深入了解内容
+- 核心观点：好的文章需要"有人站在后面"，即需要真正的人类思考和洞察
+
+现在我来写解读：
+
+第一段（内容概述）：
+文章作者从自身阅读体验出发，揭示了AI写作质量低下的根本原因——缺乏真正的思考主体。作者指出，传统写作中作者先有洞察再产出文字，读者读到的是经过思考沉淀的内容；而AI写作中，作者和读者实际上同时"第一次"接触这篇文章，作者只是利用AI快速生成后匆匆发布，并未真正参与思考过程。
+
+核心观点/数据：
+- 核心洞察："没有人在背后"（there is nobody behind it）
+- 关键对比：传统写作 vs AI写作中"思考主体"的有无
+- 深层原因：作者没有时间深入思考，只能依赖AI生成后快速发布
+
+对从业者的启发：
+- 内容创作者需要认识到AI只是工具，真正的价值在于人类的判断力和洞察力
+- 需要在AI辅助与个人思考之间找到平衡，不能完全依赖生成内容
+- 发布前应该真正理解和消化内容，而不只是追求速度
+- 应该把AI定位为提升效率的辅助手段，而非替代思考的捷径
+</think>
+
+
+这篇文章来自技术博客idiallo.com，作者从读者</div>
+  
+  <a class="read-original" href="https://idiallo.com/byte-size/have-you-read-your-own-article" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>
