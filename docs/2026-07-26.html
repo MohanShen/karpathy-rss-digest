@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年07月26日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年07月26日  |  共 2 篇来自 2 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. Ruff v0.16.0发布：默认规则从59条增至413条</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-2">2. Excel列标签不是26进制：揭秘bijective base-26系统</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>💻 科技 / 技术</h2>
+
+
+<div class="article" id="article-1">
+  <h3>Ruff v0.16.0发布：默认规则从59条增至413条</h3>
+  <div class="article-meta">
+    <span>📝 simonwillison.net</span>
+    <span>🕐 2026-07-25 22:44</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">python</span><span class="tag">ruff</span><span class="tag">astral</span></div>
+  <div class="detail"><think>用户希望我作为资深科技编辑，对Ruff v0.16.0发布这篇文章进行中文解读。要求：
+1. 第一段：讲文章内容
+2. 第二段：提炼核心观点/数据
+3. 第三段：对从业者的启发
+4. 5-8句话
+5. 专有名词保留英文（Python、CI、Git、API等）
+
+让我分析文章内容并组织解读：
+
+核心内容：
+- Ruff是Python linting工具
+- v0.16.0大幅增加了默认启用的规则：从59条增加到413条
+- 这是自v0.1.0以来首次修改默认规则集
+- 规则总数从708增长到968
+- Simon Willison在CI中测试了三个项目（Datasette、sqlite-utils、LLM）
+- 使用`ruff check . --fix --unsafe-fixes`可以自动修复大部分问题
+- sqlite-utils项目发现1618个错误，1538个自动修复，80个需手动处理
+- 文中举例DTZ005规则：datetime.datetime.now()应传入tz参数
+
+现在组织成三段式解读，5-8句话：
+</think>
+
+
+Ruff是Astral公司开发的Python代码检查工具，其v0.16.0版本于7月23日发布，大幅提升了默认规则数量。作者Simon Willison发现自己的CI任务因此全面失败，因为项目中使用了未固定版本的Ruff依赖。新版本将默认启用的规则从59条增加到413条，这是自v0.1.0以来的首次调整，而规则总数也从708条增长到968条。作者使用`uvx ruff@latest check . --fix --unsafe-fixes`命令对其三个主要项目进行修复，效果显著。以sqlite-utils为例，该命令报告发现1618个错误，其中1538个已自动修复，80个需手动处理。
+
+核心数据包括：默认规则数增长7倍（59→413）、总规则数增长37%（708→968）、</div>
+  
+  <a class="read-original" href="https://simonwillison.net/2026/Jul/25/ruff/#atom-everything" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-2">
+  <h3>Excel列标签不是26进制：揭秘bijective base-26系统</h3>
+  <div class="article-meta">
+    <span>📝 johndcook.com · John</span>
+    <span>🕐 2026-07-25 13:37</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">Math</span><span class="tag">Number systems</span></div>
+  <div class="detail"><think>
+用户需要我作为资深科技编辑，写一段关于Excel列标签bijective base-26系统的解读文章。需要包含三段：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+要求5-8句话，专有名词保留英文，注意只输出解读文本。
+</think>
+
+这篇文章揭示了Excel列标签系统的设计原理。作者在处理大型电子表格时发现，Excel的列标签并非人们直觉认为的26进制系统。在真正的26进制中需要有0来表示数值，但Excel的标签从A到Z、AA到ZZ的序列中根本不存在0的概念——Z之后直接跳到AA，而不是ZA。这说明Excel采用的是一种特殊的bijective base-26系统，即每个符号与正整数之间存在一对一映射，消除了传统进制系统中可能出现的leading zeros问题。历史上这种编号方式早有应用，但直到近代才被正式命名为bijective base b。2007年前Excel最大列数为256列（对应IV），2007年后扩展至16384列（对应XFD），展现了微软为适应大数据时代所做的改进。文中还提供了具体的转换代码实现，包括letter_to_ordinal和ordinal_to_letter等核心函数。
+
+Excel列标签系统的核心启示在于：看似简单的字母序列背后隐藏着精妙的数学设计。bijective base-26与传统base-26的本质区别在于无0和严格的一对一映射，这种设计避免了歧义（如07和7代表同一数值的问题），让每个标签唯一对应一个正整数。值得注意的是，16384列的上限恰好是2的14次方，这是一个充满技术考量的数字。
+
+对于开发者而言，处理Excel列标签转换时应避免想当然地套用普通进制转换公式，而应采用文中的专用算法——逐字符处理时每一步乘以26再加当前字母的序号值。从业者在进行数据处理、报表开发或系统集成时，若涉及Excel列标签操作，务必注意这一特殊系统，否则</div>
+  
+  <a class="read-original" href="https://www.johndcook.com/blog/2026/07/25/excel-column-numbering/" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>
