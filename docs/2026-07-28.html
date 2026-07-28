@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年07月28日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年07月28日  |  共 3 篇来自 2 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. 排列的排名与反排名算法</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-2">2. AI投资潮应普惠所有平台而非为AI定制方案</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-3">3. Python浮点数的二进制表示转换方法</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>💻 科技 / 技术</h2>
+
+
+<div class="article" id="article-1">
+  <h3>排列的排名与反排名算法</h3>
+  <div class="article-meta">
+    <span>📝 johndcook.com · John</span>
+    <span>🕐 2026-07-27 23:08</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">Computing</span><span class="tag">Combinatorics</span><span class="tag">Cryptography</span><span class="tag">SymPy</span></div>
+  <div class="detail"><think>
+用户提供了一篇关于排列排名与反排名算法的英文技术文章，要求我用5-8句话写完整中文解读，包含三段：
+1. 第一段讲文章内容
+2. 第二段提炼核心观点/数据
+3. 第三段说对从业者的启发
+
+要求专有名词保留英文（GPT、Transformer、Rust等）。只输出解读文本，不加其他内容。
+
+让我分析文章内容：
+
+1. 文章讨论的是如何用52张扑克牌存储128位加密密钥，因为log₂(52!) = 225.581位，所以理论上有余量
+2. 核心问题是：如何将排列映射到整数（ranking），以及从整数恢复排列（unranking）
+3. 算法复杂度：简单算法O(n²)，更复杂算法O(n log n)，还有O(n)但不保持字典序的算法
+4. SymPy库有相关实现
+
+现在用中文写解读：
+
+第一段（内容概述）：文章探讨了利用扑克牌排列存储加密密钥的可行性，指出52张牌的排列可表示225.58位信息，足以存储128位密钥。核心问题在于如何高效地将排列与整数相互转换，即ranking（排名）和unranking（反排名）算法。
+
+第二段（核心观点/数据）：简单ranking/unranking算法复杂度为O(n²)，更优算法可达O(n log n)，另有O(n)算法但会丢失字典序性质。SymPy库提供了相关实现示例。
+
+第三段（对从业者的启发）：在实际应用中，需要根据具体场景选择合适的算法——若需保证字典序可接受O(n²)复杂度，若追求性能则可考虑更优方案。
+
+对密钥管理而言，这提供了有形的备份机制，但对普通开发者来说，重点在于理解这些算法的权衡取舍，以便在处理排列相关问题时做出明智的技术决策。
+</think>
+
+文章探讨了利用扑克牌52张排列存储128位加密密钥的可行性，因为log₂(52!) =</div>
+  
+  <a class="read-original" href="https://www.johndcook.com/blog/2026/07/27/hiding-data-in-permutations/" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-2">
+  <h3>AI投资潮应普惠所有平台而非为AI定制方案</h3>
+  <div class="article-meta">
+    <span>📝 blog.jim-nielsen.com</span>
+    <span>🕐 2026-07-27 19:00</span>
+    <span class="category-tag">科技</span>
+  </div>
+  
+  <div class="detail"><think>The user wants me to write a Chinese interpretation of this article in 5-8 sentences, divided into three paragraphs:
+1. First paragraph: content of the article
+2. Second paragraph: core viewpoints/data
+3. Third paragraph: inspiration for practitioners
+
+Key points to cover:
+- Jason Grigsby's article about AI agents and web standards
+- Safari team's opinion: AI agents shouldn't get special treatment
+- Agents = assistive technology, should operate sites as users would
+- Arguments against bespoke solutions for AI
+- Instead: improve existing technologies (APIs, semantics) that benefit everyone
+- "Rising tide lifts all boats" metaphor
+- UX > DX > AX priority
+- The ironic contrast: AI claims to be superintelligent but needs special accommodations
+
+Technical terms to keep in English: AI agents, APIs, semantics, UX, DX, AX, web platform, assistive technology
+
+Let me write this in 5-8 sentences per paragraph, in Chinese.
+</think>
+
+
+Jason Grigsby 在文中引用了 Safari 团队的立场：AI agent 作为用户的代理，本质上是一种 assistive technology（辅助技术），它应该像用户一样操作网站，网站不应给予区别对待。他整合了当前 standards 层面的各种讨论，主张 AI agent 应使用现有的成熟技术（如 APIs、semantics 等）而非获得专属方案；当平台存在能力缺口时，解决方案应面向所有人通用开放，而非专为 AI 定制。他用“涨潮效应”比喻：与其为 AI 开发定制化方案，不如将数十亿美元的 AI 投资用于改善和增强 agent 已依赖的现有技术，让所有用户都能受益——因为 web 的本质是面向所有人的。核心观点可概括为“UX over DX over AX”的优先级框架：用户需求先于开发者需求和 agent 需求，即用户痛点才是技术演进的真正驱动力。
+
+对于 web 开发者和 standards 制定者而言，这篇文章提供了重要警示：避免被 AI 浪潮裹挟着为特定技术开辟特权通道，而应</div>
+  
+  <a class="read-original" href="https://blog.jim-nielsen.com/2026/tide-lifts-all-boats/" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-3">
+  <h3>Python浮点数的二进制表示转换方法</h3>
+  <div class="article-meta">
+    <span>📝 johndcook.com · John</span>
+    <span>🕐 2026-07-27 15:34</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">Computing</span><span class="tag">Math</span><span class="tag">Number systems</span></div>
+  <div class="detail"><think>这是一篇来自johndcook.com的技术博客文章，讲解如何用Python获取浮点数的二进制表示。
+
+让我按照要求写三段解读：
+
+第一段：文章内容
+- 介绍十六进制和二进制的转换关系（每个hex数字对应4个bit）
+- 作者想找Python函数将浮点数转为二进制，但Python没有直接函数
+- 发现Python的float对象有hex()方法
+- 通过hex表示转换：先把hex部分转成二进制，再根据p+指数调整小数点位置
+
+第二段：核心观点/数据
+- 关键发现：hex()返回的格式是"0x1.xxxp±k"，其中p后的指数是以2为底的
+- 转换步骤：hex字符串 → 二进制 → 根据p+1或p-1移动小数点
+- 例子：π的hex表示'0x1.921fb54442d18p+1'转为'11.001001000011111101101010100010001000010110100011000'
+- 另一个例子：1.03的转换，需要padding零位
+
+第三段：对从业者的启发
+- Python虽然没有直接函数，但hex()方法提供了间接途径
+- 理解浮点数的二进制表示有助于debug和精度问题排查
+- 16进制作为二进制和人类可读之间的桥梁很有用
+- 对于需要精确控制浮点表示的场景，这种转换方法很有价值
+
+格式要求：5-8句话，分三段，专有名词保留英文
+</think>
+
+
+这篇文章探讨了如何用Python获取浮点数的二进制表示。作者指出，虽然十六进制到二进制的转换非常直接——每个hex数字对应4个二进制位——但Python并没有直接提供浮点数转二进制的函数。不过，作者发现float对象有hex()方法可以显示十六进制表示，例如`math.pi.hex()`返回`'0x1.921fb54442d18p+1'`。关键发现是这个格式中p+后面的</div>
+  
+  <a class="read-original" href="https://www.johndcook.com/blog/2026/07/27/float-binary/" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>
