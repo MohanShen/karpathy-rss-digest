@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy RSS 实时精选 - 2026年07月29日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 6px; color: #fff; }
+  .site-desc { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+  .category { margin-bottom: 35px; }
+  .category h2 { font-size: 1.2em; color: #4fc3f7; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #1a1a1a; }
+  .article { background: #111; border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #1e1e1e; transition: border-color 0.2s, transform 0.1s; }
+  .article:hover { border-color: #333; transform: translateY(-1px); }
+  .article h3 { font-size: 1.08em; margin-bottom: 8px; color: #fff; line-height: 1.5; }
+  .article-meta { font-size: 0.8em; color: #666; margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .article-meta .category-tag { background: #1a3a2a; color: #4ade80; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+  .detail { font-size: 0.93em; color: #bbb; line-height: 1.9; margin-bottom: 14px; white-space: pre-line; }
+  .read-original { display: inline-block; font-size: 0.85em; color: #4fc3f7; text-decoration: none; padding: 6px 16px; border: 1px solid #2a3a4a; border-radius: 6px; transition: all 0.2s; }
+  .read-original:hover { background: #1a2a3a; border-color: #4fc3f7; }
+  .tags { margin-bottom: 10px; }
+  .tag { display: inline-block; background: #1a1a1a; color: #4fc3f7; font-size: 0.72em; padding: 2px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 4px; }
+  .footer { text-align: center; color: #444; font-size: 0.78em; margin-top: 50px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+  .footer a { color: #4fc3f7; text-decoration: none; }
+  .toc { background: #111; border-radius: 12px; padding: 20px 24px; margin-bottom: 30px; border: 1px solid #1e1e1e; }
+  .toc h3 { font-size: 0.95em; color: #888; margin-bottom: 10px; }
+  .toc ul { list-style: none; }
+  .toc li { font-size: 0.88em; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { color: #ccc; text-decoration: none; }
+  .toc a:hover { color: #4fc3f7; }
+  .toc .cat-label { color: #4fc3f7; font-size: 0.8em; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Karpathy RSS 实时精选</h1>
+<div class="site-desc">基于 Andrej Karpathy 推荐的 92 个顶级科技博客，AI 生成中文解读</div>
+<div class="meta">📅 2026年07月29日  |  共 5 篇来自 4 个博客  |  由 AI 自动生成中文解读</div>
+
+<div class="toc">
+<h3>📑 目录</h3>
+<ul>
+
+
+
+
+<li><a href="#article-1">1. Anthropic用Claude Mythos发现密码学弱点</a><span class="cat-label">🤖 AI / 机器学习</span></li>
+
+
+<li><a href="#article-2">2. AI 风险的真正来源：实验室内部而非开源模型</a><span class="cat-label">🤖 AI / 机器学习</span></li>
+
+
+
+
+<li><a href="#article-3">3. Modal CTO回应沙箱安全漏洞：平台隔离未受影响</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-4">4. 用扑克牌排列存储加密密钥的可行性分析</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+<li><a href="#article-5">5. Google Calendar 无法导入 ICS 文件的原因及修复</a><span class="cat-label">💻 科技 / 技术</span></li>
+
+
+</ul>
+</div>
+
+
+
+<div class="category">
+<h2>🤖 AI / 机器学习</h2>
+
+
+<div class="article" id="article-1">
+  <h3>Anthropic用Claude Mythos发现密码学弱点</h3>
+  <div class="article-meta">
+    <span>📝 simonwillison.net</span>
+    <span>🕐 2026-07-28 22:45</span>
+    <span class="category-tag">AI</span>
+  </div>
+  <div class="tags"><span class="tag">ai</span><span class="tag">prompt-engineering</span><span class="tag">generative-ai</span><span class="tag">llms</span><span class="tag">anthropic</span></div>
+  <div class="detail"><think>
+用户要求我作为资深科技编辑，用5-8句话写完整中文解读。结构要求：
+- 第一段：讲文章内容
+- 第二段：提炼核心观点/数据
+- 第三段：对从业者的启发
+- 专有名词保留英文（GPT、Transformer、Rust等）
+- 只输出解读文本，不加其他内容
+
+让我分析这篇文章的内容：
+1. Anthropic的研究人员使用Claude Mythos发现了密码学弱点
+2. 涉及HAWK和较弱版本AES的数学缺陷
+3. 这些发现对当今计算机系统没有实际影响
+4. Mythos Preview工作了60小时，耗资约10万美元API成本
+5. 关键是人类干预，主要是鼓励模型不要放弃
+6. 提示工程很重要，模型往往认为问题无法解决所以不尝试
+7. 目标是找到值得发表的新攻击方法，不是低垂的果实
+
+现在写解读：
+</think>
+
+Anthropic研究团队使用Claude Mythos模型进行密码学研究，成功发现了HAWK算法和一个弱化版AES中的数学缺陷，虽然这些发现对现有系统没有实际安全影响，但证明了AI在纯数学推理领域具有突破潜力。研究团队共享了完整提示词模板，其中最关键的洞察是：当面对极困难问题时，模型往往会自行判断"不可能解决"而放弃尝试，因此需要人类反复强调"寻找比现有方法更好的成果"和"发现值得发表的真正困难发现"。数据显示Mythos Preview在60小时内消耗约10万美元API成本，最终通过多次人类干预来维持模型的研究动力和目标导向。对从业者而言，这个实验揭示了AI辅助科研的核心瓶颈不在于模型能力，而在于提示工程和Human-in-the-loop机制的精心设计——尤其是处理超越当前人类认知边界的探索性任务时，模型需要被持续引导保持信心并避免过早放弃。</div>
+  
+  <a class="read-original" href="https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/#atom-everything" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-2">
+  <h3>AI 风险的真正来源：实验室内部而非开源模型</h3>
+  <div class="article-meta">
+    <span>📝 antirez.com</span>
+    <span>🕐 2026-07-28 11:00</span>
+    <span class="category-tag">AI</span>
+  </div>
+  
+  <div class="detail"><think>
+The user wants me to write a 5-8 sentence Chinese interpretation of this blog post. Let me understand the content first:
+
+The post is from antirez.com, responding to Amodei's blog post about AI risks. The author argues that the real source of AI risk comes from inside labs, not from open-source/open-weight models.
+
+Key points:
+1. The first serious AI incident will likely happen inside frontier AI labs during testing or when employees make mistakes
+2. Closed models that are never public are just TBs of data - one person with access can leak them. Open models are released AFTER testing and when similar capability models already exist via API. The real risk is leaks, not releases, and leaks happen inside companies.
+3. Open models can be trained on ablated corpora (removing certain dangerous branches of science) and still be useful for other things. Limited context from lacking certain pre-training is protection. We're not yet at the point where open models pose this level of danger.
+4. In cybersecurity, not having widespread access to LLMs for defensive security and bug finding creates the "LLMs as a weapon" problem. Open source maintainers can't find all security bugs while bad actors can access frontier cyber models.
+
+Now I need to write 3 paragraphs:
+- First: article content
+- Second: core viewpoints/data
+- Third: implications for practitioners
+
+Let me write this in 5-8 sentences per paragraph, in Chinese, keeping technical terms in English.
+</think>
+
+这篇文章反驳了Anthropic CEO Amodei关于AI风险的判断，作者以开源倡导者的视角，指出真正的危险源并非开源模型本身，而是Frontier AI实验室的内部运作。作者以OpenAI/HF事件为例，认为首个严重的AI事故极可能发生在实验室内部测试新模型期间，或因获得访问权限的员工操作失误而引发。同时，作者强调那些永不公开的Closed Model同样是大量TB级数据，只需一个有访问权限且怀有恶意的人就能将其泄露，本质上</div>
+  
+  <a class="read-original" href="http://antirez.com/news/172" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+<div class="category">
+<h2>💻 科技 / 技术</h2>
+
+
+<div class="article" id="article-3">
+  <h3>Modal CTO回应沙箱安全漏洞：平台隔离未受影响</h3>
+  <div class="article-meta">
+    <span>📝 simonwillison.net</span>
+    <span>🕐 2026-07-28 22:05</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">ai-security-research</span><span class="tag">openai</span><span class="tag">sandboxing</span><span class="tag">security</span><span class="tag">openai-hugging-face-incident</span></div>
+  <div class="detail"><think>
+用户要求我作为资深科技编辑，用5-8句话写完整中文解读：
+- 第一段讲文章内容
+- 第二段提炼核心观点/数据
+- 第三段说对从业者的启发
+- 专有名词保留英文（GPT、Transformer、Rust等）
+- 只输出解读文本，不加其他内容
+
+让我分析这篇内容：
+
+这是一篇关于Modal公司安全事件的技术报道。Modal CTO Akshat Bubna向Reuters回应了一起安全事件：一位Modal客户发布了一个未认证的端点（unauthenticated endpoint），允许互联网上任何人使用该客户的沙箱进行代码执行。这个漏洞被一个"恶意代理"（rogue agent）利用了。但Modal CTO强调，Modal的平台本身或隔离机制并未被攻破。
+
+关键信息：
+1. 事件：Modal客户配置错误导致沙箱被滥用
+2. 责任方：客户自己的配置问题，非平台漏洞
+3. 平台安全：Modal的隔离技术未受影响
+4. 来源：Reuters报道，Simon Willison收集
+5. 时间：2026年7月28日
+
+现在写解读：
+</think>
+
+## 解读
+
+这篇报道援引了Modal CTO Akshat Bubna接受Reuters采访的内容，披露了一起因客户配置错误引发的安全事件：一名Modal用户公开暴露了一个无需认证的API端点，使得互联网上的任何人都能调用该用户的Sandbox资源进行代码执行，这一漏洞被一个“恶意代理”（rogue agent）所利用。
+
+核心信息是此次事件的根本原因在于终端用户的错误配置，而非Modal平台本身的漏洞。CTO明确声明Modal的Platform隔离机制和底层安全架构未受任何影响，这意味着Sandbox技术的可信执行环境依然完整，客户数据与计算资源的隔离边界未被突破。
+
+这起事件对AI平台从业者具有重要警示意义：即使底层Infrastructure安全性再高，若用户端的API设计存在疏漏（如缺少Authentication和Authorization），攻击者仍可通过合法接口滥用资源；同时也提醒平台</div>
+  
+  <a class="read-original" href="https://simonwillison.net/2026/Jul/28/akshat-bubna/#atom-everything" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-4">
+  <h3>用扑克牌排列存储加密密钥的可行性分析</h3>
+  <div class="article-meta">
+    <span>📝 johndcook.com · John</span>
+    <span>🕐 2026-07-28 12:13</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">Math</span><span class="tag">Combinatorics</span><span class="tag">Cryptography</span></div>
+  <div class="detail"><think>
+The user wants me to write a Chinese interpretation of this article about storing cryptographic keys using playing card permutations. Let me analyze the content and write in the required format:
+
+1. First paragraph: content summary
+2. Second paragraph: core viewpoints/data
+3. Third paragraph: implications for practitioners
+
+Key points to cover:
+- A deck of 52 cards can store 225 bits via permutation
+- Bitcoin keys (256 bits) need 58 cards (Zwicker deck) or 52+2 jokers with orientation (261 bits)
+- RSA 2048-bit needs 301 cards, 3072-bit needs 422 cards
+- ML-KEM-512 needs 1442 cards (13056 bits)
+- Post-quantum cryptography has much larger key sizes, creating practical challenges
+
+Technical terms to keep in English: Bitcoin, RSA, ML-KEM, ML-KEM-512, Transformer (if mentioned), cryptographic key, bits, permutation
+
+Let me write this in 5-8 sentences total, in Chinese, with the three-part structure.
+</think>
+
+本文探讨了用扑克牌排列顺序存储加密密钥的数学原理：52张牌的排列可编码225位数据（⌊log₂(52!)⌋=225），超过此长度则需扩展牌组。Bitcoin的256位密钥需要58张牌（Zwicker牌组），或用52张标准牌加2张 Joker 考虑方向性可达到261位；RSA 2048位密钥需要301张牌，3072位需要422张；而量子抗性算法ML-KEM-512的1632字节密钥则需1442张牌，这对实际应用造成挑战。
+
+核心数据揭示了传统加密与后量子密码学在密钥体积上的巨大差异：传统RSA 2048位仅需300余张牌，但ML-KEM-512的13056位密钥需要近1500张牌。
+
+对密码学从业者而言，这篇文章直观</div>
+  
+  <a class="read-original" href="https://www.johndcook.com/blog/2026/07/28/keys-and-cards/" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+
+<div class="article" id="article-5">
+  <h3>Google Calendar 无法导入 ICS 文件的原因及修复</h3>
+  <div class="article-meta">
+    <span>📝 shkspr.mobi · @edent</span>
+    <span>🕐 2026-07-28 11:34</span>
+    <span class="category-tag">科技</span>
+  </div>
+  <div class="tags"><span class="tag">/etc/</span><span class="tag">android</span><span class="tag">bug</span><span class="tag">google</span><span class="tag">standards</span></div>
+  <div class="detail"><think>The user wants me to write a Chinese interpretation of this article about Google Calendar ICS import issues. I need to follow the specific format:
+1. First paragraph: article content
+2. Second paragraph: core viewpoints/data
+3. Third paragraph: inspiration for practitioners
+
+I need to keep technical terms in English (ICS, DTSTAMP, iCalendar, etc.) and write 5-8 sentences total.
+
+Let me write this:
+</think>
+
+
+多年来，大量用户在Google产品论坛反映从邮件下载.ics文件后，尝试添加到Google Calendar时会收到"Unable to launch event"错误提示。博客作者检查了数十个损坏的iCalendar邀请文件，发现它们都存在相同问题：缺少DTSTAMP属性。根据RFC 5545规范，DTSTAMP是iCalendar标准中VEVENT组件的必填属性，但许多系统（如快递通知等）生成的ICS文件遗漏了这一字段。作者通过添加缺失的DTSTAMP属性成功修复了问题，并提供了修复前后两个文件的下载链接供读者测试验证。Google官方文档对此问题描述模糊，仅简单说明必需字段而未强调DTSTAMP的强制性。
+
+核心发现是：DTSTAMP字段用于标识日历组件的创建时间，必须采用UTC时间格式（如20260713T093000Z）。经测试验证，所有iOS设备和部分Android日历能够容忍缺失DTSTAMP，但Google Calendar严格遵循RFC标准会直接拒绝导入。问题根源在于部分系统生成的ICS文件不符合规范，包括快递通知、预约提醒等自动化场景。修复方法极为简单——在VEVENT块中添加一行"DTSTAMP:YYYYMMDDTHHMMSSZ"即可。
+
+对于开发者而言，无论使用何种语言（Python、Node.js、Rust等）生成ICS文件，都必须严格遵循RFC 5545规范，DTSTAMP和UID是必填字段。对于终端用户，遇到"Unable to launch event"错误时，可尝试手动添加缺失的DTSTAMP行修复文件。从业者还应意识到，虽然</div>
+  
+  <a class="read-original" href="https://shkspr.mobi/blog/2026/07/google-calendar-unable-to-launch-event-caused-by-missing-dtstamp/" target="_blank">📖 阅读英文原文 →</a>
+</div>
+
+</div>
+
+
+<div class="footer">
+  由 <a href="https://github.com/" target="_blank">Karpathy RSS Daily Digest</a> 自动生成<br>
+  数据来源: Andrej Karpathy 推荐的 92 个顶级科技博客
+</div>
+</div>
+</body>
+</html>
